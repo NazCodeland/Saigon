@@ -1,0 +1,45 @@
+/*  */
+
+:root {
+	--color-fore: #333;
+	--color-back: #fff;
+	--color-head: #ccc;
+	--color-link: #33f;
+}
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	font-weight: 400;
+	line-height: 1.6;
+	padding: 0;
+	margin: 0;
+}
+
+a {
+	white-space: nowrap;
+	user-select: none;
+}
+
+a:link,
+a:visited {
+	color: var(--color-link);
+}
+
+h2,
+p {
+	margin-block-start: 1em;
+}
+
+body {
+	font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji',
+		'Segoe UI Emoji', 'Segoe UI Symbol';
+	font-size: clamp(1rem, calc(1rem + 0.5vw), 2.5rem);
+	line-height: 1.5;
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+	animation-duration: 1s;
+}
