@@ -19,27 +19,18 @@
 </nav>
 
 <style>
-	nav {
-		background-color: #333;
-	}
-
 	nav ul {
 		display: flex;
-		justify-content: end;
 		list-style-type: none;
-	}
-
-	nav li {
-		padding-left: 2rem;
+		column-gap: 8px;
 	}
 
 	nav li a {
 		color: white;
-		padding: 14px 16px;
 		text-decoration: none;
 	}
 
-	a::before {
+	/* a::before {
 		content: '';
 		display: none;
 		background-color: orange;
@@ -52,5 +43,5 @@
 
 	a:hover::before {
 		display: block;
-	}
+	} */
 </style>

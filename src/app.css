@@ -1,6 +1,12 @@
-/*  */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
+	--color-primary: #ff3a33;
+	--color-secondary: #ffcd00;
+	--color-tertiary: #d3d3d3;
+
 	--color-fore: #333;
 	--color-back: #fff;
 	--color-head: #ccc;
@@ -35,7 +41,8 @@ p {
 body {
 	font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji',
 		'Segoe UI Emoji', 'Segoe UI Symbol';
-	font-size: clamp(1rem, calc(1rem + 0.5vw), 2.5rem);
+	/* font-size: clamp(1rem, calc(1rem + 0.5vw), 2.5rem); */
+	font-size: 1rem;
 	line-height: 1.5;
 }
 
