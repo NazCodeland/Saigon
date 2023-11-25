@@ -9,23 +9,11 @@
 	}
 </script>
 
-<div class="language-selection">
+<div class="flex gap-2">
 	{#each languages as lang (lang)}
-		<button on:click={() => changeLanguage(lang)}>{lang}</button>
+		<button class="border-2 px-1" on:click={() => changeLanguage(lang)}>{lang}</button>
 	{/each}
 </div>
 
 <style>
-	.language-selection {
-		position: absolute;
-		top: 8px;
-		right: 8px;
-
-		display: flex;
-		column-gap: 4px;
-	}
-
-	.language-selection > button {
-		padding-inline: 2px;
-	}
 </style>

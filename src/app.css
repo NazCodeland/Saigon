@@ -11,6 +11,10 @@
 	--color-back: #fff;
 	--color-head: #ccc;
 	--color-link: #33f;
+
+	--gray: 50;
+	--gray: 50;
+	--gray-800: #0a1217;
 }
 
 *,
@@ -30,7 +34,7 @@ a {
 
 a:link,
 a:visited {
-	color: var(--color-link);
+	/* color: var(--color-link); */
 }
 
 h2,
@@ -39,8 +43,9 @@ p {
 }
 
 body {
-	font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji',
-		'Segoe UI Emoji', 'Segoe UI Symbol';
+	/* font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji',
+		'Segoe UI Emoji', 'Segoe UI Symbol'; */
+	font-family: 'Open Sans', Arial, sans-serif;
 	/* font-size: clamp(1rem, calc(1rem + 0.5vw), 2.5rem); */
 	font-size: 1rem;
 	line-height: 1.5;

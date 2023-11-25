@@ -11,11 +11,11 @@
 </script>
 
 <section
-	class="outline outline-1 rounded-md outline-[var(--color-secondary)] p-4 flex flex-col gap-y-4"
+	class="outline outline-1 rounded-md outline-[var(--color-primary)] p-4 flex flex-col gap-y-4"
 	id="#hours"
 >
 	<h1 class="font-bold text-xl text-center">BUSINESS HOURS</h1>
-	<hr class="border border-[var(--color-secondary)] border-1" />
+	<hr class="border border-[var(--color-primary)] border-1" />
 	<div class="flex gap-x-8">
 		<ul class="flex flex-col">
 			<li class:highlight={'monday' === currentDay} class="pb-1">Monday</li>
@@ -41,7 +41,7 @@
 
 <style lang="css">
 	.highlight {
-		border-top: 1px solid var(--color-secondary);
-		border-bottom: 1px solid var(--color-secondary);
+		border-top: 1px solid var(--color-primary);
+		border-bottom: 1px solid var(--color-primary);
 	}
 </style>

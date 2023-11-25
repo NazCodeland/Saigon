@@ -1,5 +1,5 @@
 <script>
-	export let navItems = ['Menu', 'Reservations', 'Contact', 'Order Online'];
+	let navItems = ['Menu', 'Reservations', 'Contact', 'Order Online'];
 	let navLinkUrls = [
 		'/menu',
 		'https://www.tbdine.com/book/restaurant/saigon-restaurant?idApp=70479&language=en-us',
@@ -8,28 +8,30 @@
 	];
 </script>
 
+<!-- <nav class="absolute left-4 top-24 border-t-2 border-[var(--color-primary)] w-[286px]"> -->
 <nav>
-	<ul>
+	<ul class="flex flex-col gap-y-2">
 		{#each navItems as item, index (item)}
 			<li>
-				<a href={navLinkUrls[index]}>{item}</a>
+				<a class="text-gray-50 font-semibold" href={navLinkUrls[index]}>{item.toUpperCase()}</a>
 			</li>
 		{/each}
 	</ul>
 </nav>
 
 <style>
-	nav ul {
-		display: flex;
-		list-style-type: none;
-		column-gap: 8px;
+	nav {
+		position: relative;
 	}
-
-	nav li a {
-		color: white;
-		text-decoration: none;
+	ul::before {
+		content: '';
+		display: block;
+		position: absolute;
+		left: -2px;
+		background-color: var(--color-primary);
+		inline-size: 3px;
+		block-size: 160px;
 	}
-
 	/* a::before {
 		content: '';
 		display: none;
