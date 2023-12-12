@@ -1,10 +1,12 @@
 <script>
 	import '../app.css';
+	import Header from '$lib/components/Header.svelte';
+	import Footer from '$lib/components/Footer.svelte';
 </script>
 
-<main class="m-4 max-w-7xl">
-	<slot />
-</main>
+<Header />
+<slot />
+<Footer />
 
 <style>
 </style>

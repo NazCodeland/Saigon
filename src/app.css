@@ -2,56 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-	--color-primary: #ff3a33;
-	--color-secondary: #ffcd00;
-	--color-tertiary: #d3d3d3;
-
-	--color-fore: #333;
-	--color-back: #fff;
-	--color-head: #ccc;
-	--color-link: #33f;
-
-	--gray: 50;
-	--gray: 50;
-	--gray-800: #0a1217;
-}
-
-*,
-*::after,
-*::before {
-	box-sizing: border-box;
-	font-weight: 400;
-	line-height: 1.6;
-	padding: 0;
-	margin: 0;
-}
-
-a {
-	white-space: nowrap;
-	user-select: none;
-}
-
-a:link,
-a:visited {
-	/* color: var(--color-link); */
-}
-
-h2,
-p {
-	margin-block-start: 1em;
-}
-
 body {
 	/* font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji',
 		'Segoe UI Emoji', 'Segoe UI Symbol'; */
-	font-family: 'Open Sans', Arial, sans-serif;
+	/* font-family: 'Open Sans', Arial, sans-serif; */
 	/* font-size: clamp(1rem, calc(1rem + 0.5vw), 2.5rem); */
-	font-size: 1rem;
-	line-height: 1.5;
+	/* font-size: 1rem; */
+	/* line-height: 1.5; */
+	/* color: var(--color-text); */
 }
 
-::view-transition-old(root),
-::view-transition-new(root) {
-	animation-duration: 1s;
+@media (prefers-color-scheme: light) {
+	:root {
+		--theme-color-text: theme(colors.slate.900);
+		--theme-color-background: theme(colors.slate.50);
+		--theme-color-primary: #ff3a33;
+		--theme-color-secondary: #ffcd00;
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--theme-color-text: theme(colors.slate.50);
+		--theme-color-background: theme(colors.slate.950);
+	}
 }

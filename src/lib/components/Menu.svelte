@@ -1,13 +1,6 @@
 <script>
-	import { slide, fade, fly } from 'svelte/transition';
 	import Nav from './Nav.svelte';
-	import hamburger from '$lib/icons/hamburger.svg';
-	let showNav = true;
 </script>
-
-<!-- <button class="cursor-pointer" on:click={() => (showNav = !showNav)}>
-		<img src={hamburger} alt="Menu" />
-	</button> -->
 
 <Nav />
 
