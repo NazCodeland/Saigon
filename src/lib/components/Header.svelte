@@ -4,9 +4,9 @@
 	import Nav from './Nav.svelte';
 </script>
 
-<header class="grid">
-	<Logo />
+<header class="relative w-full">
 	<!-- <Languages /> -->
+	<Logo />
 	<Nav />
 </header>
 

@@ -2,28 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+	scroll-behavior: smooth;
+}
+
 body {
-	/* font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji',
-		'Segoe UI Emoji', 'Segoe UI Symbol'; */
-	/* font-family: 'Open Sans', Arial, sans-serif; */
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1rem;
 	/* font-size: clamp(1rem, calc(1rem + 0.5vw), 2.5rem); */
-	/* font-size: 1rem; */
-	/* line-height: 1.5; */
-	/* color: var(--color-text); */
+	color: var(--theme-color-text);
+	background-color: var(--theme-color-background);
+	padding: 16px;
+}
+
+:root {
+	--theme-color-primary: #ff3a33;
 }
 
 @media (prefers-color-scheme: light) {
 	:root {
+		--theme-color-secondary: #fd5a18;
 		--theme-color-text: theme(colors.slate.900);
 		--theme-color-background: theme(colors.slate.50);
-		--theme-color-primary: #ff3a33;
-		--theme-color-secondary: #ffcd00;
 	}
 }
 
 @media (prefers-color-scheme: dark) {
 	:root {
+		--theme-color-secondary: #fdaa88;
 		--theme-color-text: theme(colors.slate.50);
-		--theme-color-background: theme(colors.slate.950);
+		--theme-color-background: #121212;
 	}
 }

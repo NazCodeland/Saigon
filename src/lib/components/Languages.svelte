@@ -9,9 +9,11 @@
 	}
 </script>
 
-<div class="flex gap-2 absolute top-2 right-2 text-xs">
+<div class="flex gap-2 absolute top-2 right-4 text-xs">
 	{#each languages as lang (lang)}
-		<button class="border-2 px-1" on:click={() => changeLanguage(lang)}>{lang}</button>
+		<button class="border border-slate-700 px-2 py-1" on:click={() => changeLanguage(lang)}
+			>{lang}</button
+		>
 	{/each}
 </div>
 

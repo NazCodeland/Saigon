@@ -1,7 +1,14 @@
 <script>
 </script>
 
-<svg width="158" height="94" viewBox="0 0 158 94" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg
+	class="mt-2"
+	width="158"
+	height="94"
+	viewBox="0 0 158 94"
+	fill="none"
+	xmlns="http://www.w3.org/2000/svg"
+>
 	<style></style>
 	<g clip-path="url(#clip0_8_2)" filter="url(#filter0_d_8_2)">
 		<path

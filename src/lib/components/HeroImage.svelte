@@ -1,11 +1,12 @@
 <script>
 </script>
 
-<img class="hero-image" src="heroimage.png" alt="Saigon Logo" />
+<img class="hero-image" src="/menu/dishes/hero image.avif" alt="Saigon Logo" />
 
 <style>
 	.hero-image {
 		/* object-fit: cover; */
+
 		position: absolute;
 		top: 0;
 		left: 0;

@@ -9,7 +9,12 @@ export default {
 				'theme-primary': 'var(--theme-color-primary)',
 				'theme-secondary': 'var(--theme-color-secondary)'
 			}
+		},
+		screens: {
+			sm: '440px',
+			md: '808px'
 		}
 	},
+
 	plugins: []
 };
