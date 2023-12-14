@@ -33,8 +33,12 @@
 </button>
 
 {#if $navStore}
-	<nav in:slide out:slide class="border-t-2 border-theme-primary shadow-md">
-		<ul class="flex flex-col md:flex-row md:justify-evenly items-center gap-2 p-4">
+	<nav
+		in:slide
+		out:slide
+		class="border-t-2 border-theme-primary md:border-none md:shadow-none shadow-md"
+	>
+		<ul class="flex flex-col md:flex-row md:justify-evenly items-center md:gap-8 gap-2 p-4">
 			{#each navItems as item (item.name)}
 				<li class="whitespace-nowrap">
 					<a class="" href={item.url}>{item.name.toUpperCase()}</a>

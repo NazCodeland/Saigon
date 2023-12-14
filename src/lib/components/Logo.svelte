@@ -3,8 +3,8 @@
 
 <svg
 	class="mt-2"
-	width="158"
-	height="94"
+	width="200"
+	height="136"
 	viewBox="0 0 158 94"
 	fill="none"
 	xmlns="http://www.w3.org/2000/svg"

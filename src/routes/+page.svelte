@@ -7,11 +7,11 @@
 	import Footer from '$lib/components/Footer.svelte';
 </script>
 
-<main class="flex flex-col gap-y-32 max-w-[1230px] items-center">
+<main class="flex flex-col gap-y-32 max-w-[1230px] m-auto">
 	<!-- <HeroImage /> -->
 	<Header />
+	<RestaurantMenu />
 	<GoogleMaps />
 	<Hours />
-	<RestaurantMenu />
 	<Footer />
 </main>

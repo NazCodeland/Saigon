@@ -32,5 +32,6 @@ body {
 		--theme-color-secondary: #fdaa88;
 		--theme-color-text: theme(colors.slate.50);
 		--theme-color-background: #121212;
+		--theme-color-background: #333333;
 	}
 }
