@@ -1,3 +1,15 @@
+<script>
+	import SocialLinks from '$lib/components/SocialLinks.svelte';
+</script>
+
 <footer>
-	<p>hello I am footer</p>
+	<ul class="social-accounts">
+		<li>
+			<a href="https://www.instagram.com/saigonottawa/" target="_blank" rel="noopener">
+				<i>
+					<SocialLinks />
+				</i>
+			</a>
+		</li>
+	</ul>
 </footer>
