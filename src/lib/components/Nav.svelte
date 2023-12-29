@@ -11,15 +11,17 @@
 		{ name: 'Order Online', url: 'https://www.ubereats.com/store/saigon-restaurant/nApsyLBYUdWMrTVkXtkPfQ?diningMode=DELIVERY' }
 	];
 
+	let innerWidth: number;
 	let outerWidth: number;
 	$: {
-		if (outerWidth >= 808) {
+		if (innerWidth >= 808 || outerWidth >= 808) {
 			navStore.set(true);
+			console.log('innerWidth', innerWidth);
 		}
 	}
 </script>
 
-<svelte:window bind:outerWidth />
+<svelte:window bind:innerWidth bind:outerWidth />
 
 <!-- hamburger icon button -->
 <button
