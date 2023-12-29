@@ -77,12 +77,12 @@
 			},
 			{
 				id: 6,
-				img: '/menu/dishes/small plates/Bo Tai Tartare.jpg',
-				name: 'Bo Tai Tartare',
+				img: null,
+				name: 'Beef Carpaccio',
 				quantity: null,
-				type: null,
+				type: 'Bo Tai Chanh',
 				description:
-					'Lean top round beef finely chopped and marinated. Topped with micro greens, crispy fried shallots and served with fresh tortilla chips. A classic Vietnamese "beef carpaccio" meets French techniques for an ultimate fusion experience.',
+					'Thin sliced rare beef in a lime, sesame, fish sauce marinade with mint, cilantro and crispy fried shallots. served with tortilla chips and shrimp chips.',
 				variants: [],
 				price: 19,
 				addons: []
@@ -121,11 +121,34 @@
 				variants: [],
 				price: 11,
 				addons: []
+			},
+			{
+				id: 10,
+				img: null,
+				name: 'Fried Wonton',
+				quantity: null,
+				type: null,
+				description: 'Chicken wonton, fried and served with sweet chili sauce.',
+				variants: [],
+				price: 12,
+				addons: []
+			},
+			{
+				id: 11,
+				img: null,
+				name: 'Steamed wonton',
+				quantity: null,
+				type: null,
+				description:
+					'Chicken wonton, steamed and served in house made soy sauce vinaigrette and chili oil.',
+				variants: [],
+				price: 12,
+				addons: []
 			}
 		],
 		soups: [
 			{
-				id: 10,
+				id: 1,
 				img: '/menu/dishes/soups/Beef Pho.jpg',
 				name: 'Beef Pho',
 				quantity: null,
@@ -139,7 +162,7 @@
 				addons: []
 			},
 			{
-				id: 11,
+				id: 2,
 				img: '/menu/dishes/soups/King Oyster Mushrooms.jpg',
 				name: 'king oyster mushrooms',
 				quantity: null,
@@ -149,11 +172,23 @@
 				variants: [],
 				price: 12,
 				addons: []
+			},
+			{
+				id: 3,
+				img: null,
+				name: 'Wonton Noodle',
+				quantity: null,
+				type: null,
+				description:
+					'Egg Noodle, chicken wonton, bok choy, shitake mushroom in chicken broth served with a side of house made chili oil.',
+				variants: [],
+				price: 18,
+				addons: []
 			}
 		],
 		'rice plates': [
 			{
-				id: 12,
+				id: 1,
 				img: null,
 				name: 'Grilled Chicken',
 				quantity: null,
@@ -165,7 +200,7 @@
 				addons: []
 			},
 			{
-				id: 13,
+				id: 2,
 				img: null,
 				name: 'Grilled Beef',
 				quantity: null,
@@ -177,7 +212,7 @@
 				addons: []
 			},
 			{
-				id: 14,
+				id: 3,
 				img: null,
 				name: 'Grilled Pork',
 				quantity: null,
@@ -189,7 +224,7 @@
 				addons: []
 			},
 			{
-				id: 15,
+				id: 4,
 				img: null,
 				name: 'Grilled Shrimp',
 				quantity: null,
@@ -201,7 +236,7 @@
 				addons: []
 			},
 			{
-				id: 16,
+				id: 5,
 				img: null,
 				name: 'Grilled Tofu',
 				quantity: null,
@@ -215,7 +250,7 @@
 		],
 		'vermicelli plates': [
 			{
-				id: 17,
+				id: 1,
 				img: null,
 				name: 'Grilled Chicken',
 				quantity: null,
@@ -227,7 +262,7 @@
 				addons: []
 			},
 			{
-				id: 18,
+				id: 2,
 				img: null,
 				name: 'Grilled Beef',
 				quantity: null,
@@ -239,7 +274,7 @@
 				addons: []
 			},
 			{
-				id: 19,
+				id: 3,
 				img: null,
 				name: 'Grilled Pork',
 				quantity: null,
@@ -251,7 +286,7 @@
 				addons: []
 			},
 			{
-				id: 20,
+				id: 4,
 				img: null,
 				name: 'Grilled Shrimp',
 				quantity: null,
@@ -263,7 +298,7 @@
 				addons: []
 			},
 			{
-				id: 21,
+				id: 5,
 				img: null,
 				name: 'Grilled Tofu',
 				quantity: null,
@@ -277,7 +312,7 @@
 		],
 		'specialty items': [
 			{
-				id: 22,
+				id: 1,
 				img: '/menu/dishes/specialty items/Saigon Taco.jpg',
 				name: 'Saigon Taco',
 				quantity: '1',
@@ -296,7 +331,7 @@
 				addons: []
 			},
 			{
-				id: 23,
+				id: 2,
 				img: '/menu/dishes/specialty items/Saigon Sliders.jpg',
 				name: 'Saigon Sliders',
 				quantity: '2',
@@ -310,7 +345,7 @@
 		],
 		Dessert: [
 			{
-				id: 24,
+				id: 3,
 				img: null,
 				name: 'Deep Fried Banana',
 				quantity: null,
@@ -322,7 +357,7 @@
 				addons: []
 			},
 			{
-				id: 25,
+				id: 4,
 				img: null,
 				name: 'Vanilla Ice Cream',
 				quantity: '1 SCOOP',
@@ -515,7 +550,7 @@
 		],
 		'da basics': [
 			{
-				id: 16,
+				id: 1,
 				img: null,
 				name: 'Mixed Bar Rail',
 				quantity: null,
@@ -530,7 +565,7 @@
 				price: null
 			},
 			{
-				id: 17,
+				id: 2,
 				img: null,
 				name: 'Bar Rail Shots',
 				quantity: null,
@@ -544,7 +579,7 @@
 		],
 		beer: [
 			{
-				id: 18,
+				id: 1,
 				img: null,
 				name: 'Asahi',
 				quantity: 'Bottle',
@@ -555,7 +590,7 @@
 				price: 9
 			},
 			{
-				id: 19,
+				id: 2,
 				img: null,
 				name: 'Bud Light',
 				quantity: 'Bottle',
@@ -566,7 +601,7 @@
 				price: 9
 			},
 			{
-				id: 20,
+				id: 3,
 				img: null,
 				name: 'Stella Artois',
 				quantity: 'Bottle',
@@ -577,7 +612,7 @@
 				price: 9
 			},
 			{
-				id: 21,
+				id: 4,
 				img: null,
 				name: 'Corona',
 				quantity: 'Bottle',
@@ -588,7 +623,7 @@
 				price: 9
 			},
 			{
-				id: 22,
+				id: 5,
 				img: null,
 				name: 'Red Stripe',
 				quantity: 'Bottle',
@@ -599,7 +634,7 @@
 				price: 9
 			},
 			{
-				id: 23,
+				id: 6,
 				img: null,
 				name: 'Blood Orange',
 				quantity: 'Tall Can',
@@ -612,7 +647,7 @@
 		],
 		wine: [
 			{
-				id: 24,
+				id: 1,
 				img: null,
 				name: 'Two oceans cabernet sauvignon merlot',
 				quantity: null,
@@ -626,7 +661,7 @@
 				price: null
 			},
 			{
-				id: 25,
+				id: 2,
 				img: null,
 				name: 'Nederburg shiraz',
 				quantity: null,
@@ -640,7 +675,7 @@
 				price: null
 			},
 			{
-				id: 26,
+				id: 3,
 				img: null,
 				name: 'Two oceans sauvignon blanc',
 				quantity: null,
@@ -654,7 +689,7 @@
 				price: null
 			},
 			{
-				id: 27,
+				id: 4,
 				img: null,
 				name: 'Fleur du cap chardonnay',
 				quantity: null,
@@ -668,7 +703,7 @@
 				price: null
 			},
 			{
-				id: 28,
+				id: 5,
 				img: null,
 				name: 'Adobe reserva organic rose',
 				quantity: null,
@@ -684,7 +719,7 @@
 		],
 		mocktails: [
 			{
-				id: 29,
+				id: 1,
 				img: null,
 				name: 'Enlightened lemonade',
 				quantity: null,
@@ -695,7 +730,7 @@
 				price: 10
 			},
 			{
-				id: 30,
+				id: 2,
 				img: null,
 				name: 'Fineapple',
 				quantity: null,
@@ -706,7 +741,7 @@
 				price: 10
 			},
 			{
-				id: 31,
+				id: 3,
 				img: null,
 				name: '"no whiskey" sour',
 				quantity: null,
@@ -717,7 +752,7 @@
 				price: 10
 			},
 			{
-				id: 32,
+				id: 4,
 				img: null,
 				name: 'no rum no problem',
 				quantity: null,
@@ -730,7 +765,7 @@
 		],
 		'non-alcoholic': [
 			{
-				id: 33,
+				id: 1,
 				img: null,
 				name: 'Pop',
 				quantity: null,
@@ -741,7 +776,7 @@
 				price: 3.5
 			},
 			{
-				id: 34,
+				id: 2,
 				img: null,
 				name: 'Juice',
 				quantity: null,
@@ -752,7 +787,7 @@
 				price: 4
 			},
 			{
-				id: 35,
+				id: 3,
 				img: null,
 				name: 'Perrier',
 				quantity: null,
@@ -763,7 +798,7 @@
 				price: 4
 			},
 			{
-				id: 36,
+				id: 4,
 				img: null,
 				name: 'Vietnamese iced coffee',
 				quantity: null,
@@ -774,7 +809,7 @@
 				price: 8
 			},
 			{
-				id: 37,
+				id: 5,
 				img: null,
 				name: 'Saigon iced tea',
 				quantity: null,
@@ -785,7 +820,7 @@
 				price: 7
 			},
 			{
-				id: 38,
+				id: 6,
 				img: null,
 				name: 'Limeade soda',
 				quantity: null,
@@ -796,7 +831,7 @@
 				price: 7
 			},
 			{
-				id: 39,
+				id: 7,
 				img: null,
 				name: 'Salted lime soda',
 				quantity: null,
@@ -807,7 +842,7 @@
 				price: 7
 			},
 			{
-				id: 40,
+				id: 8,
 				img: null,
 				name: 'Tea',
 				quantity: null,
@@ -826,21 +861,26 @@
 
 <SocialLinks />
 
-<div id="menu">
-	<button
-		class="py-2 px-4 border w-40 rounded mb-8 {showDrinks ? '' : ' border-theme-primary '}"
-		on:click={() => (showDrinks = false)}
-	>
-		FOOD
-	</button>
-	<button
-		class="py-2 px-4 border w-40 rounded mb-8 {showDrinks ? ' border-theme-primary' : ''}"
-		on:click={() => (showDrinks = true)}
-	>
-		DRINKS
-	</button>
+<div class="flex flex-col items-center gap-8" id="menu">
+	<span class="flex items-center gap-2 flex-wrap justify-center">
+		<button
+			class="py-2 px-4 border w-40 rounded {showDrinks ? '' : ' border-theme-primary '}"
+			on:click={() => (showDrinks = false)}
+		>
+			FOOD
+		</button>
+		<button
+			class="py-2 px-4 border w-40 rounded {showDrinks ? ' border-theme-primary' : ''}"
+			on:click={() => (showDrinks = true)}
+		>
+			DRINKS
+		</button>
+	</span>
 
-	<button class="py-2 px-4 border w-40 rounded m-auto" on:click={() => (showImages = !showImages)}>
+	<button
+		class="py-2 px-3 border w-30 rounded motion-safe:inline-block hidden"
+		on:click={() => (showImages = !showImages)}
+	>
 		{#if showImages}
 			Hide Images
 		{:else}
@@ -941,7 +981,7 @@
 														{item.img.includes('Beef Pho') || item.img.includes('King Oyster Mushrooms')
 														? 'object-left-bottom'
 														: ''}
-														object-cover w-full max-w-[380px] h-[320px] hover:scale-150 transition-scale duration-200"
+														object-cover w-full max-w-[380px] h-[320px] motion-safe:hover:scale-150 motion-safe:transition-scale motion-safe:duration-200"
 													src={item.img}
 													alt={item.name}
 												/>
