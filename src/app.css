@@ -22,8 +22,8 @@ body {
 @media (prefers-color-scheme: light) {
 	:root {
 		--theme-color-secondary: #fd5a18;
-		--theme-color-text: theme(colors.slate.900);
-		--theme-color-background: theme(colors.slate.50);
+		--theme-color-text: theme(colors.slate.50);
+		--theme-color-background: #333333;
 	}
 }
 

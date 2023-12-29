@@ -285,10 +285,11 @@
 				description:
 					'Saigon aioli, spicy mayo, pickled red cabbage, green papaya, carrots, and cilantro. Street food staple with a saigon twist.',
 				variants: [
-					{ name: 'Pork', price: null },
-					{ name: 'Beef', price: null },
-					{ name: 'Chicken', price: null },
+					{ name: 'Pork', price: 8 },
+					{ name: 'Beef', price: 8 },
+					{ name: 'Chicken', price: 8 },
 					{ name: 'Tofu', price: 8 },
+					{ name: null, price: 8 },
 					{ name: 'Shrimp', price: 10 }
 				],
 				price: null,
@@ -825,7 +826,7 @@
 
 <SocialLinks />
 
-<div id="menu" class="text-center">
+<div id="menu">
 	<button
 		class="py-2 px-4 border w-40 rounded mb-8 {showDrinks ? '' : ' border-theme-primary '}"
 		on:click={() => (showDrinks = false)}
@@ -839,17 +840,18 @@
 		DRINKS
 	</button>
 
-	<!-- <button class="py-2 px-4 border w-40 rounded m-auto" on:click={() => (showImages = !showImages)}>
+	<button class="py-2 px-4 border w-40 rounded m-auto" on:click={() => (showImages = !showImages)}>
 		{#if showImages}
 			Hide Images
 		{:else}
 			Show Images
 		{/if}
-	</button> -->
+	</button>
 
 	{#key showDrinks}
 		<div class="grid gap-12 md:gap-24" transition:fade={{ duration: 150 }}>
 			{#if showDrinks}
+				<!-- drinks menu -->
 				{#each Object.entries(drinkMenu) as [category, items]}
 					<section class="grid gap-4">
 						<h2 class="text-theme-secondary text-3xl font-bold text-center">
@@ -916,6 +918,7 @@
 					</section>
 				{/each}
 			{:else}
+				<!-- food menu -->
 				{#each Object.entries(foodMenu) as [category, items]}
 					<section class="grid gap-4">
 						<h2 class="text-theme-secondary text-3xl font-bold text-center">
@@ -934,7 +937,11 @@
 										>
 											<div class="overflow-hidden">
 												<img
-													class="object-cover w-full max-w-[380px] h-[320px] hover:scale-150 transition-scale duration-200"
+													class="
+														{item.img.includes('Beef Pho') || item.img.includes('King Oyster Mushrooms')
+														? 'object-left-bottom'
+														: ''}
+														object-cover w-full max-w-[380px] h-[320px] hover:scale-150 transition-scale duration-200"
 													src={item.img}
 													alt={item.name}
 												/>
@@ -975,7 +982,7 @@
 									{/if}
 									<!-- addons -->
 									{#each item.addons as addon}
-										<span> {addon.name} - <strong> ${addon.price}</strong></span>
+										<span> {addon.name} + <strong> ${addon.price}</strong></span>
 									{/each}
 								</li>
 							{/each}
