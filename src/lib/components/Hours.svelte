@@ -6,13 +6,12 @@
 
 	if (browser) {
 		let date = new Date();
-		console.log('date.getDay()', date.getDay());
 		currentDay = days[date.getDay()].toLowerCase();
 	}
 </script>
 
 <section
-	class="flex flex-col gap-4 outline outline-1 rounded-md outline-[var(--theme-color-primary)] p-4 max-w-[340px] w-full"
+	class="flex flex-col gap-4 outline outline-1 rounded-md outline-[var(--theme-color-primary)] p-4 max-w-[360px] w-full"
 >
 	<h1 class=" font-bold text-center">BUSINESS HOURS</h1>
 	<hr class="border border-[var(--theme-color-primary)]" />
