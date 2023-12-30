@@ -895,7 +895,7 @@
 	};
 </script>
 
-<div class="mt-10 flex flex-col items-center gap-8" id="menu">
+<div class="flex flex-col items-center gap-8" id="menu">
 	<div class="flex flex-wrap items-center justify-center gap-2">
 		<button
 			class="w-32 select-none rounded border py-2 {showDrinks ? '' : ' border-theme-primary '}"
@@ -912,7 +912,7 @@
 	</div>
 
 	<button
-		class="w-30 hidden select-none rounded border border-gray-600 px-3 py-2 motion-safe:inline-block"
+		class="w-30 hidden select-none rounded border border-[#474747] px-3 py-2 text-gray-300 motion-safe:inline-block"
 		on:click={() => (showImages = !showImages)}
 	>
 		{#if showImages}
@@ -934,7 +934,7 @@
 						<ul class="flex flex-wrap justify-center gap-4">
 							{#each items as item (item.id)}
 								<li
-									class="border-gray-3000 flex w-full max-w-[380px] flex-col gap-1 rounded-md border p-4 dark:border-gray-400"
+									class="flex w-full max-w-[380px] flex-col gap-1 rounded-md border border-[#474747] p-4"
 								>
 									{#if showImages && item.img}
 										<figure
@@ -1003,7 +1003,7 @@
 						<ul class="flex flex-wrap justify-center gap-4">
 							{#each items as item (item.id)}
 								<li
-									class=" border-gray-3000 flex w-full max-w-[380px] flex-col gap-1 rounded-md border p-2 dark:border-gray-400"
+									class="flex w-full max-w-[380px] flex-col gap-1 rounded-md border border-[#474747] p-2"
 								>
 									<!-- if menu item contains an image -->
 									{#if showImages && item.img}

@@ -1,5 +1,5 @@
 <svg
-	class="logo-shadow mt-2 h-[136px] w-[200px] md:mt-16 md:h-[200px] md:w-full"
+	class="logo-shadow mt-2 h-[136px] w-[200px] md:mt-[30vh] md:h-[400px] md:w-full"
 	viewBox="0 0 158 94"
 	fill="none"
 	xmlns="http://www.w3.org/2000/svg"

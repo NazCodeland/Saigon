@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { browser } from '$app/environment';
 	import { navStore, toggleNav } from '$lib/stores/navStore';
 	import { slide } from 'svelte/transition';
 
@@ -38,11 +37,11 @@
 	<nav
 		in:slide
 		out:slide
-		class="select-none border-t-2 border-theme-primary shadow-md md:border-none md:shadow-none"
+		class="select-none border-t-2 border-theme-primary shadow-md md:absolute md:top-[100vh] md:border-none md:shadow-none"
 	>
-		<ul class="flex flex-col items-center gap-2 p-4 md:flex-row md:justify-evenly md:gap-8">
+		<ul class="md:justify-gap-8 flex flex-row flex-wrap items-center justify-evenly gap-2 py-4">
 			{#each navItems as item (item.name)}
-				<li class="whitespace-nowrap bg-theme-background px-1 py-0.5 md:text-xl">
+				<li class="whitespace-nowrap px-1 py-0.5 text-xs md:text-xl">
 					<a class="" href={item.url}>{item.name.toUpperCase()}</a>
 				</li>
 			{/each}
