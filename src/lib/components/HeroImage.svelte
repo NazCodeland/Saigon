@@ -2,7 +2,7 @@
 </script>
 
 <img
-	class="absolute top-0 left-0 -z-10 object-cover w-full h-[275px]"
+	class="absolute left-0 top-0 -z-10 h-[275px] w-full object-cover"
 	src="hero-image.jpg"
 	alt="Saigon Logo"
 />

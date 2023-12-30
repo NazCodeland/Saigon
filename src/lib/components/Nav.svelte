@@ -28,7 +28,7 @@
 	on:click={toggleNav}
 	type="button"
 	tabindex="0"
-	class="md:hidden absolute top-12 right-0"
+	class="absolute right-0 top-12 md:hidden"
 	aria-label="menu"
 >
 	<img src="hamburger.svg" alt="menu icon" />
@@ -38,11 +38,11 @@
 	<nav
 		in:slide
 		out:slide
-		class="border-t-2 border-theme-primary md:border-none md:shadow-none shadow-md select-none"
+		class="select-none border-t-2 border-theme-primary shadow-md md:border-none md:shadow-none"
 	>
-		<ul class="flex flex-col md:flex-row md:justify-evenly items-center md:gap-8 gap-2 p-4">
+		<ul class="flex flex-col items-center gap-2 p-4 md:flex-row md:justify-evenly md:gap-8">
 			{#each navItems as item (item.name)}
-				<li class="whitespace-nowrap bg-theme-background px-1 py-0.5">
+				<li class="whitespace-nowrap bg-theme-background px-1 py-0.5 md:text-xl">
 					<a class="" href={item.url}>{item.name.toUpperCase()}</a>
 				</li>
 			{/each}

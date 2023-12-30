@@ -11,9 +11,9 @@
 </script>
 
 <section
-	class="flex flex-col gap-4 outline outline-1 rounded-md outline-[var(--theme-color-primary)] p-4 max-w-[360px] w-full"
+	class="flex w-full max-w-[360px] flex-col gap-4 rounded-md p-4 outline outline-1 outline-[var(--theme-color-primary)]"
 >
-	<h1 class=" font-bold text-center">BUSINESS HOURS</h1>
+	<h1 class=" text-center font-bold">BUSINESS HOURS</h1>
 	<hr class="border border-[var(--theme-color-primary)]" />
 	<div class="flex justify-between">
 		<ul class="">
