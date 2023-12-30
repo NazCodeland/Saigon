@@ -1,10 +1,44 @@
 <script lang="ts">
 	import { fade, slide } from 'svelte/transition';
-	import SocialLinks from './SocialLinks.svelte';
-	let showImages = true;
-	let showDrinks = false;
 
-	let foodMenu = {
+	let showImages: boolean = true;
+	let showDrinks: boolean = false;
+
+	type VariantDetails = {
+		name: string | null;
+		price: number | null;
+	};
+
+	type AddonDetails = {
+		name: string;
+		price: number;
+	};
+
+	type DishDetails = {
+		id: number;
+		img: string | null;
+		name: string;
+		quantity: string | null;
+		type: string | null;
+		description: string;
+		variants: VariantDetails[];
+		price: number | null;
+		addons: AddonDetails[];
+	};
+
+	type DrinkDetails = {
+		id: number;
+		img: string | null;
+		name: string;
+		quantity: string | null;
+		type: string | null;
+		size: string | null;
+		description: string | null;
+		variants: any[];
+		price: number | null;
+	};
+
+	let foodMenu: { [key: string]: DishDetails[] } = {
 		'small plates': [
 			{
 				id: 1,
@@ -159,6 +193,7 @@
 					{ name: 'Mini', price: 11 },
 					{ name: 'Large', price: 19 }
 				],
+				price: null,
 				addons: []
 			},
 			{
@@ -370,7 +405,8 @@
 			}
 		]
 	};
-	let drinkMenu = {
+
+	let drinkMenu: { [key: string]: DrinkDetails[] } = {
 		'signature cocktails': [
 			{
 				id: 1,
@@ -859,26 +895,24 @@
 	};
 </script>
 
-<SocialLinks />
-
-<div class="flex flex-col items-center gap-8" id="menu">
-	<span class="flex items-center gap-2 flex-wrap justify-center">
+<div class="flex flex-col items-center gap-8 mt-10" id="menu">
+	<div class="flex items-center gap-2 flex-wrap justify-center">
 		<button
-			class="py-2 px-4 border w-40 rounded {showDrinks ? '' : ' border-theme-primary '}"
+			class="py-2 select-none px-4 border w-40 rounded {showDrinks ? '' : ' border-theme-primary '}"
 			on:click={() => (showDrinks = false)}
 		>
 			FOOD
 		</button>
 		<button
-			class="py-2 px-4 border w-40 rounded {showDrinks ? ' border-theme-primary' : ''}"
+			class="py-2 select-none px-4 border w-40 rounded {showDrinks ? ' border-theme-primary' : ''}"
 			on:click={() => (showDrinks = true)}
 		>
 			DRINKS
 		</button>
-	</span>
+	</div>
 
 	<button
-		class="py-2 px-3 border w-30 rounded motion-safe:inline-block hidden"
+		class="py-2 select-none px-3 border w-30 rounded motion-safe:inline-block hidden"
 		on:click={() => (showImages = !showImages)}
 	>
 		{#if showImages}
@@ -961,7 +995,9 @@
 				<!-- food menu -->
 				{#each Object.entries(foodMenu) as [category, items]}
 					<section class="grid gap-4">
-						<h2 class="text-theme-secondary text-3xl font-bold text-center">
+						<h2
+							class="text-theme-secondary text-3xl font-bold text-center selection:bg-[#FFFF00] selection:text-theme-background"
+						>
 							{category.toUpperCase()}
 						</h2>
 						<ul class="flex flex-wrap gap-4 justify-center">

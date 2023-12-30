@@ -12,7 +12,9 @@ export default {
 		},
 		screens: {
 			sm: '440px',
-			md: '808px'
+			md: '808px',
+			portrait: { raw: '(orientation: portrait)' },
+			landscape: { raw: '(orientation: landscape)' }
 		}
 	},
 

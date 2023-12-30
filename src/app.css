@@ -4,6 +4,7 @@
 
 html {
 	scroll-behavior: smooth;
+	scroll-padding-top: 4px;
 }
 
 body {
@@ -17,21 +18,20 @@ body {
 
 :root {
 	--theme-color-primary: #ff3a33;
+	--theme-color-text: theme(colors.slate.50);
+	--theme-color-background: #333333;
 }
 
 @media (prefers-color-scheme: light) {
 	:root {
+		/*  */
 		--theme-color-secondary: #fd5a18;
-		--theme-color-text: theme(colors.slate.50);
-		--theme-color-background: #333333;
 	}
 }
 
 @media (prefers-color-scheme: dark) {
 	:root {
+		/*  */
 		--theme-color-secondary: #fdaa88;
-		--theme-color-text: theme(colors.slate.50);
-		--theme-color-background: #121212;
-		--theme-color-background: #333333;
 	}
 }
