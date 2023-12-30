@@ -1,6 +1,6 @@
 <iframe
 	title="map"
-	class="max-w-[600px] w-full rounded-md"
+	class="w-full max-w-[600px] rounded-md"
 	height="350"
 	style="border:0"
 	loading="lazy"

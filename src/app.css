@@ -4,34 +4,24 @@
 
 html {
 	scroll-behavior: smooth;
-}
-
-body {
-	font-family: 'Open Sans', 'Lato', 'Roboto', sans-serif;
-	font-size: 1rem;
-	/* font-size: clamp(1rem, calc(1rem + 0.5vw), 2.5rem); */
-	color: var(--theme-color-text);
-	background-color: var(--theme-color-background);
-	padding: 16px;
+	scroll-padding-top: 4px;
 }
 
 :root {
 	--theme-color-primary: #ff3a33;
+	--theme-color-text: theme(colors.slate.50);
+	--theme-color-background: #333333;
+	--theme-color-secondary: #fd5a18;
 }
 
 @media (prefers-color-scheme: light) {
 	:root {
-		--theme-color-secondary: #fd5a18;
-		--theme-color-text: theme(colors.slate.50);
-		--theme-color-background: #333333;
+		/* future styles */
 	}
 }
 
 @media (prefers-color-scheme: dark) {
 	:root {
-		--theme-color-secondary: #fdaa88;
-		--theme-color-text: theme(colors.slate.50);
-		--theme-color-background: #121212;
-		--theme-color-background: #333333;
+		/* future styles */
 	}
 }

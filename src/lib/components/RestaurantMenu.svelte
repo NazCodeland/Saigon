@@ -1,10 +1,44 @@
 <script lang="ts">
 	import { fade, slide } from 'svelte/transition';
-	import SocialLinks from './SocialLinks.svelte';
-	let showImages = true;
-	let showDrinks = false;
 
-	let foodMenu = {
+	let showImages: boolean = true;
+	let showDrinks: boolean = false;
+
+	type VariantDetails = {
+		name: string | null;
+		price: number | null;
+	};
+
+	type AddonDetails = {
+		name: string;
+		price: number;
+	};
+
+	type DishDetails = {
+		id: number;
+		img: string | null;
+		name: string;
+		quantity: string | null;
+		type: string | null;
+		description: string;
+		variants: VariantDetails[];
+		price: number | null;
+		addons: AddonDetails[];
+	};
+
+	type DrinkDetails = {
+		id: number;
+		img: string | null;
+		name: string;
+		quantity: string | null;
+		type: string | null;
+		size: string | null;
+		description: string | null;
+		variants: any[];
+		price: number | null;
+	};
+
+	let foodMenu: { [key: string]: DishDetails[] } = {
 		'small plates': [
 			{
 				id: 1,
@@ -159,6 +193,7 @@
 					{ name: 'Mini', price: 11 },
 					{ name: 'Large', price: 19 }
 				],
+				price: null,
 				addons: []
 			},
 			{
@@ -370,7 +405,8 @@
 			}
 		]
 	};
-	let drinkMenu = {
+
+	let drinkMenu: { [key: string]: DrinkDetails[] } = {
 		'signature cocktails': [
 			{
 				id: 1,
@@ -859,26 +895,24 @@
 	};
 </script>
 
-<SocialLinks />
-
-<div class="flex flex-col items-center gap-8" id="menu">
-	<span class="flex items-center gap-2 flex-wrap justify-center">
+<div class="mt-10 flex flex-col items-center gap-8" id="menu">
+	<div class="flex flex-wrap items-center justify-center gap-2">
 		<button
-			class="py-2 px-4 border w-40 rounded {showDrinks ? '' : ' border-theme-primary '}"
+			class="w-32 select-none rounded border py-2 {showDrinks ? '' : ' border-theme-primary '}"
 			on:click={() => (showDrinks = false)}
 		>
 			FOOD
 		</button>
 		<button
-			class="py-2 px-4 border w-40 rounded {showDrinks ? ' border-theme-primary' : ''}"
+			class="w-32 select-none rounded border py-2 {showDrinks ? ' border-theme-primary' : ''}"
 			on:click={() => (showDrinks = true)}
 		>
 			DRINKS
 		</button>
-	</span>
+	</div>
 
 	<button
-		class="py-2 px-3 border w-30 rounded motion-safe:inline-block hidden"
+		class="w-30 hidden select-none rounded border border-gray-600 px-3 py-2 motion-safe:inline-block"
 		on:click={() => (showImages = !showImages)}
 	>
 		{#if showImages}
@@ -894,13 +928,13 @@
 				<!-- drinks menu -->
 				{#each Object.entries(drinkMenu) as [category, items]}
 					<section class="grid gap-4">
-						<h2 class="text-theme-secondary text-3xl font-bold text-center">
+						<h2 class="text-center text-3xl font-bold text-theme-secondary">
 							{category.toUpperCase()}
 						</h2>
-						<ul class="flex flex-wrap gap-4 justify-center">
+						<ul class="flex flex-wrap justify-center gap-4">
 							{#each items as item (item.id)}
 								<li
-									class="flex flex-col gap-1 border p-4 rounded-md border-gray-3000 dark:border-gray-400 w-full max-w-[380px]"
+									class="border-gray-3000 flex w-full max-w-[380px] flex-col gap-1 rounded-md border p-4 dark:border-gray-400"
 								>
 									{#if showImages && item.img}
 										<figure
@@ -908,12 +942,12 @@
 											transition:slide={{ duration: 150, delay: 0 }}
 										>
 											<img
-												class="object-cover w-full max-w-[380px] h-[320px]"
+												class="h-[320px] w-full max-w-[380px] object-cover"
 												src={item.img}
 												alt={item.name}
 											/>
 											<figcaption class="text-center">
-												<strong class="font-bold text-theme-secondary text-lg">
+												<strong class="text-lg font-bold text-theme-secondary">
 													{item.name.toUpperCase()}
 													{#if item.quantity}({item.quantity.toUpperCase()}){/if}
 												</strong>
@@ -922,7 +956,7 @@
 									{:else}
 										<!-- TODO: have the dish names centered or aligned to the left? -->
 										<!-- if menu item does not contain an image -->
-										<strong class="font-bold text-theme-secondary text-lg">
+										<strong class="text-lg font-bold text-theme-secondary">
 											{item.name.toUpperCase()}
 											{#if item.quantity}({item.quantity.toUpperCase()}){/if}
 											{#if item.type}
@@ -961,13 +995,15 @@
 				<!-- food menu -->
 				{#each Object.entries(foodMenu) as [category, items]}
 					<section class="grid gap-4">
-						<h2 class="text-theme-secondary text-3xl font-bold text-center">
+						<h2
+							class="text-center text-3xl font-bold text-theme-secondary selection:bg-[#FFFF00] selection:text-theme-background"
+						>
 							{category.toUpperCase()}
 						</h2>
-						<ul class="flex flex-wrap gap-4 justify-center">
+						<ul class="flex flex-wrap justify-center gap-4">
 							{#each items as item (item.id)}
 								<li
-									class=" flex flex-col gap-1 border p-4 rounded-md border-gray-3000 dark:border-gray-400 w-full max-w-[380px]"
+									class=" border-gray-3000 flex w-full max-w-[380px] flex-col gap-1 rounded-md border p-2 dark:border-gray-400"
 								>
 									<!-- if menu item contains an image -->
 									{#if showImages && item.img}
@@ -975,20 +1011,20 @@
 											class="flex flex-col gap-2"
 											transition:slide={{ duration: 150, delay: 0 }}
 										>
-											<div class="overflow-hidden">
+											<div class="overflow-hidden rounded-md">
 												<img
 													class="
 														{item.img.includes('Beef Pho') || item.img.includes('King Oyster Mushrooms')
 														? 'object-left-bottom'
 														: ''}
-														object-cover w-full max-w-[380px] h-[320px] motion-safe:hover:scale-150 motion-safe:transition-scale motion-safe:duration-200"
+														motion-safe:transition-scale h-[320px] w-full max-w-[380px] object-cover motion-safe:duration-200 motion-safe:hover:scale-150"
 													src={item.img}
 													alt={item.name}
 												/>
 											</div>
 											<!-- TODO: dishes without picture have Dish Name aligned:left, keep it that way or center all? -->
 											<figcaption class="text-center">
-												<strong class="font-bold text-theme-secondary text-lg">
+												<strong class="text-lg font-bold text-theme-secondary">
 													{item.name.toUpperCase()}
 													{#if item.quantity}({item.quantity}){/if}
 													{#if item.type}({item.type}){/if}
@@ -998,7 +1034,7 @@
 									{:else}
 										<!-- TODO: have the dish names centered or aligned to the left? -->
 										<!-- if menu item does not contain an image -->
-										<strong class="font-bold text-theme-secondary text-lg">
+										<strong class="text-lg font-bold text-theme-secondary">
 											{item.name.toUpperCase()}
 											{#if item.quantity}({item.quantity}){/if}
 										</strong>

@@ -1,18 +1,11 @@
 <script>
 </script>
 
-<img class="hero-image" src="/menu/dishes/hero image.avif" alt="Saigon Logo" />
+<img
+	class="absolute left-0 top-0 -z-10 h-[275px] w-full object-cover"
+	src="hero-image.jpg"
+	alt="Saigon Logo"
+/>
 
 <style>
-	.hero-image {
-		/* object-fit: cover; */
-
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		z-index: -10;
-		display: flow-root;
-	}
 </style>

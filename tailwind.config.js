@@ -3,6 +3,9 @@ export default {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
 	theme: {
 		extend: {
+			fontFamily: {
+				restaurant: ['Open Sans', 'Lato', 'Roboto', 'sans-serif']
+			},
 			colors: {
 				'theme-text': 'var(--theme-color-text)',
 				'theme-background': 'var(--theme-color-background)',
