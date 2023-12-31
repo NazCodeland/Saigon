@@ -1,5 +1,6 @@
+<!-- https://utopia.fyi/space/calculator?c=320,136,1.2,1440,400,1.25,5,2,&s=,,s-l&g=s,l,xl,12 -->
 <svg
-	class="logo-shadow mt-2 h-[136px] w-[200px] md:h-[400px] md:w-full"
+	class="logo-shadow -mt-2 h-[clamp(8.5rem,3.7857rem+23.5714vw,25rem)] w-full"
 	viewBox="0 0 158 94"
 	fill="none"
 	xmlns="http://www.w3.org/2000/svg"
