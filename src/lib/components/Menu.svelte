@@ -42,7 +42,7 @@
 		'small plates': [
 			{
 				id: 1,
-				img: '/menu/dishes/small plates/vegetarian-spring-rolls',
+				img: '/menu/dishes/small-plates/vegetarian-spring-rolls',
 				name: 'Vegetarian Spring Rolls',
 				quantity: '2',
 				type: null,
@@ -54,7 +54,7 @@
 			},
 			{
 				id: 2,
-				img: '/menu/dishes/small plates/salad-rolls',
+				img: '/menu/dishes/small-plates/salad-rolls',
 				name: 'Salad Rolls',
 				quantity: '2',
 				type: null,
@@ -69,7 +69,7 @@
 			},
 			{
 				id: 3,
-				img: '/menu/dishes/small plates/papaya-salad',
+				img: '/menu/dishes/small-plates/papaya-salad',
 				name: 'Papaya Salad',
 				quantity: null,
 				type: 'GF',
@@ -81,7 +81,7 @@
 			},
 			{
 				id: 4,
-				img: '/menu/dishes/small plates/chicken-wings',
+				img: '/menu/dishes/small-plates/chicken-wings',
 				name: 'Chicken Wings',
 				quantity: '5',
 				type: null,
@@ -99,7 +99,7 @@
 			},
 			{
 				id: 5,
-				img: '/menu/dishes/small plates/braised-pork-belly',
+				img: '/menu/dishes/small-plates/braised-pork-belly',
 				name: 'Braised Pork Belly',
 				quantity: 'Limited Quantity',
 				type: null,
@@ -146,7 +146,7 @@
 			},
 			{
 				id: 9,
-				img: '/menu/dishes/small plates/stir-fry-veggies',
+				img: '/menu/dishes/small-plates/stir-fry-veggies',
 				name: 'Stir-Fry Veggies',
 				quantity: null,
 				type: null,
@@ -348,7 +348,7 @@
 		'specialty items': [
 			{
 				id: 1,
-				img: '/menu/dishes/specialty items/saigon-taco',
+				img: '/menu/dishes/specialty-items/saigon-taco',
 				name: 'Saigon Taco',
 				quantity: '1',
 				type: null,
@@ -367,7 +367,7 @@
 			},
 			{
 				id: 2,
-				img: '/menu/dishes/specialty items/saigon-sliders',
+				img: '/menu/dishes/specialty-items/saigon-sliders',
 				name: 'Saigon Sliders',
 				quantity: '2',
 				type: null,
