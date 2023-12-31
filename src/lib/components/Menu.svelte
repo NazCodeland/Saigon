@@ -895,7 +895,7 @@
 	};
 </script>
 
-<div class="flex flex-col items-center gap-8" id="menu">
+<div class="mt-24 flex flex-col items-center gap-8" id="menu">
 	<div class="flex flex-wrap items-center justify-center gap-2">
 		<button
 			class="w-32 select-none rounded border py-2 {showDrinks ? '' : ' border-theme-primary '}"

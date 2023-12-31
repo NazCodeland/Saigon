@@ -1,15 +1,21 @@
 <script lang="ts">
 	import Logo from './Logo.svelte';
 	import Nav from './Nav.svelte';
+	import HeroImage from '$lib/components/HeroImage.svelte';
+	let imageHeight: number;
 </script>
 
-<!-- https://utopia.fyi/space/calculator?c=320,48,1.2,1240,98,1.25,5,2,&s=,,s-l&g=s,l,xl,12 -->
-<header
-	class="relative flex w-full flex-col gap-[clamp(3rem,-13.5092rem+82.5462vw,28.125rem)] md:flex md:flex-col md:items-center"
->
+<header class="md:grid md:items-center" style="height: {imageHeight}px;">
 	<Logo />
-	<Nav />
+	<div
+		bind:clientHeight={imageHeight}
+		class="absolute right-0 top-0 -z-10
+		w-full object-contain object-top"
+	>
+		<img src="hero-image.jpg" class="m-auto md:h-[100vh]" alt="Saigon Logo" />
+	</div>
 </header>
+<Nav />
 
 <style>
 </style>
