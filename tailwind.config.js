@@ -15,7 +15,9 @@ export default {
 		},
 		screens: {
 			sm: '440px',
-			md: '808px'
+			md: '808px',
+			phone: '640px',
+			tablet: '1024px'
 		}
 	},
 

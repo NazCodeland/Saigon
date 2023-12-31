@@ -42,7 +42,7 @@
 		'small plates': [
 			{
 				id: 1,
-				img: '/menu/dishes/small plates/Vegetarian Spring Rolls.jpg',
+				img: '/menu/dishes/small plates/Vegetarian Spring Rolls',
 				name: 'Vegetarian Spring Rolls',
 				quantity: '2',
 				type: null,
@@ -54,7 +54,7 @@
 			},
 			{
 				id: 2,
-				img: '/menu/dishes/small plates/Salad Rolls.jpg',
+				img: '/menu/dishes/small plates/Salad Rolls',
 				name: 'Salad Rolls',
 				quantity: '2',
 				type: null,
@@ -69,7 +69,7 @@
 			},
 			{
 				id: 3,
-				img: '/menu/dishes/small plates/Papaya Salad.jpg',
+				img: '/menu/dishes/small plates/Papaya Salad',
 				name: 'Papaya Salad',
 				quantity: null,
 				type: 'GF',
@@ -81,7 +81,7 @@
 			},
 			{
 				id: 4,
-				img: '/menu/dishes/small plates/Chicken Wings.jpg',
+				img: '/menu/dishes/small plates/Chicken Wings',
 				name: 'Chicken Wings',
 				quantity: '5',
 				type: null,
@@ -99,7 +99,7 @@
 			},
 			{
 				id: 5,
-				img: '/menu/dishes/small plates/Braised Pork Belly.jpg',
+				img: '/menu/dishes/small plates/Braised Pork Belly',
 				name: 'Braised Pork Belly',
 				quantity: 'Limited Quantity',
 				type: null,
@@ -146,7 +146,7 @@
 			},
 			{
 				id: 9,
-				img: '/menu/dishes/small plates/Stir-Fry Veggies.jpg',
+				img: '/menu/dishes/small plates/Stir-Fry Veggies',
 				name: 'Stir-Fry Veggies',
 				quantity: null,
 				type: null,
@@ -183,7 +183,7 @@
 		soups: [
 			{
 				id: 1,
-				img: '/menu/dishes/soups/Beef Pho.jpg',
+				img: '/menu/dishes/soups/Beef Pho',
 				name: 'Beef Pho',
 				quantity: null,
 				type: null,
@@ -198,7 +198,7 @@
 			},
 			{
 				id: 2,
-				img: '/menu/dishes/soups/King Oyster Mushrooms.jpg',
+				img: '/menu/dishes/soups/King Oyster Mushrooms',
 				name: 'king oyster mushrooms',
 				quantity: null,
 				type: 'GF',
@@ -348,7 +348,7 @@
 		'specialty items': [
 			{
 				id: 1,
-				img: '/menu/dishes/specialty items/Saigon Taco.jpg',
+				img: '/menu/dishes/specialty items/Saigon Taco',
 				name: 'Saigon Taco',
 				quantity: '1',
 				type: null,
@@ -367,7 +367,7 @@
 			},
 			{
 				id: 2,
-				img: '/menu/dishes/specialty items/Saigon Sliders.jpg',
+				img: '/menu/dishes/specialty items/Saigon Sliders',
 				name: 'Saigon Sliders',
 				quantity: '2',
 				type: null,
@@ -410,7 +410,7 @@
 		'signature cocktails': [
 			{
 				id: 1,
-				img: '/menu/drinks/signature cocktails/Spill The Tea.jpg',
+				img: '/menu/drinks/signature cocktails/Spill The Tea',
 				name: 'Spill The Tea',
 				quantity: 'serves 2ppl',
 				type: null,
@@ -422,7 +422,7 @@
 			},
 			{
 				id: 2,
-				img: '/menu/drinks/signature cocktails/Mangos in the market.jpg',
+				img: '/menu/drinks/signature cocktails/Mangos in the market',
 				name: 'Mangos in the market',
 				quantity: null,
 				type: null,
@@ -434,7 +434,7 @@
 			},
 			{
 				id: 3,
-				img: `/menu/drinks/signature cocktails/Pop it like it's hot.jpg`,
+				img: `/menu/drinks/signature cocktails/Pop it like it's hot`,
 				name: "Pop it like it's hot",
 				quantity: null,
 				type: null,
@@ -445,7 +445,7 @@
 			},
 			{
 				id: 4,
-				img: '/menu/drinks/signature cocktails/Good morning, Vietnam.jpg',
+				img: '/menu/drinks/signature cocktails/Good morning Vietnam',
 				name: 'Good morning, Vietnam!',
 				quantity: null,
 				type: null,
@@ -457,7 +457,7 @@
 			},
 			{
 				id: 5,
-				img: '/menu/drinks/signature cocktails/Saigon Mai Tai.jpg',
+				img: '/menu/drinks/signature cocktails/Saigon Mai Tai',
 				name: 'Saigon Mai Tai',
 				quantity: null,
 				type: null,
@@ -469,7 +469,7 @@
 			},
 			{
 				id: 6,
-				img: '/menu/drinks/signature cocktails/Tiger Shrike.jpg',
+				img: '/menu/drinks/signature cocktails/Tiger Shrike',
 				name: 'Tiger Shrike',
 				quantity: null,
 				type: null,
@@ -481,7 +481,7 @@
 			},
 			{
 				id: 7,
-				img: '/menu/drinks/signature cocktails/Pho Old Fashioned.jpg',
+				img: '/menu/drinks/signature cocktails/Pho Old Fashioned',
 				name: 'Pho Old Fashioned',
 				quantity: null,
 				type: null,
@@ -493,7 +493,7 @@
 			},
 			{
 				id: 8,
-				img: '/menu/drinks/signature cocktails/Ume Sour.jpg',
+				img: '/menu/drinks/signature cocktails/Ume Sour',
 				name: 'Ume Sour',
 				quantity: null,
 				type: null,
@@ -504,7 +504,7 @@
 			},
 			{
 				id: 9,
-				img: '/menu/drinks/signature cocktails/District 1 Mojito.jpg',
+				img: '/menu/drinks/signature cocktails/District 1 Mojito',
 				name: 'District 1 Mojito',
 				quantity: null,
 				type: null,
@@ -944,17 +944,20 @@
 											class="flex flex-col gap-2"
 											transition:slide={{ duration: 150, delay: 0 }}
 										>
-											<div class="overflow-hidden rounded-md">
+											<picture class="overflow-hidden rounded-md">
+												<source srcset="{item.img}.avif" type="image/avif" />
+												<source srcset="{item.img}.webp" type="image/webp" />
 												<img
-													class="
-																{item.img.includes('Beef Pho') || item.img.includes('King Oyster Mushrooms')
+													loading="lazy"
+													class="{item.img.includes('Beef Pho') ||
+													item.img.includes('King Oyster Mushrooms')
 														? 'object-left-bottom'
-														: ''}
-																motion-safe:transition-scale h-[320px] w-full max-w-[380px] object-cover motion-safe:duration-200 motion-safe:hover:scale-150"
-													src={item.img}
+														: ''} motion-safe:transition-scale h-[320px] w-full max-w-[380px] object-cover motion-safe:duration-200 motion-safe:hover:scale-150"
+													src="{item.img}.webp"
 													alt={item.name}
 												/>
-											</div>
+											</picture>
+
 											<figcaption class="text-center">
 												<strong class="text-lg font-bold text-theme-secondary">
 													{item.name.toUpperCase()}
@@ -1016,11 +1019,16 @@
 											class="flex flex-col gap-2"
 											transition:slide={{ duration: 150, delay: 0 }}
 										>
-											<img
-												class="h-[320px] w-full max-w-[380px] object-cover"
-												src={item.img}
-												alt={item.name}
-											/>
+											<picture>
+												<source srcset="{item.img}.avif" type="image/avif" />
+												<source srcset="{item.img}.webp" type="image/webp" />
+												<img
+													loading="lazy"
+													class="h-[320px] w-full max-w-[380px] object-cover"
+													src="{item.img}.webp"
+													alt={item.name}
+												/>
+											</picture>
 											<figcaption class="text-center">
 												<strong class="text-lg font-bold text-theme-secondary">
 													{item.name.toUpperCase()}

@@ -33,7 +33,11 @@
 </button> -->
 
 {#if $navStore}
-	<nav in:slide out:slide class=" w-full select-none border-t-2 border-theme-primary shadow-md">
+	<nav
+		in:slide
+		out:slide
+		class=" w-full select-none border-t-2 border-theme-primary shadow-md md:bg-transparent"
+	>
 		<ul class=" flex flex-row flex-wrap items-center justify-evenly gap-2 py-4">
 			{#each navItems as item (item.name)}
 				<li class="whitespace-nowrap px-1 py-0.5 text-xs md:text-lg">
