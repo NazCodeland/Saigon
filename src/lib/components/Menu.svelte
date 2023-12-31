@@ -912,7 +912,7 @@
 	</div>
 
 	<button
-		class="w-30 hidden select-none rounded border border-[#474747] px-4 py-2 text-gray-300 motion-safe:inline-block"
+		class="w-30 hidden select-none whitespace-nowrap rounded border border-[#474747] px-4 py-2 text-gray-300 motion-safe:inline-block"
 		on:click={() => (showImages = !showImages)}
 	>
 		{#if showImages}
@@ -924,74 +924,7 @@
 
 	{#key showDrinks}
 		<div class="grid gap-12 md:gap-24" transition:fade={{ duration: 150 }}>
-			{#if showDrinks}
-				<!-- drinks menu -->
-				{#each Object.entries(drinkMenu) as [category, items]}
-					<section class="grid gap-4">
-						<h2 class="text-center text-3xl font-bold text-theme-secondary">
-							{category.toUpperCase()}
-						</h2>
-						<ul class="flex flex-wrap justify-center gap-4">
-							{#each items as item (item.id)}
-								<li
-									class="flex w-full max-w-[380px] flex-col gap-1 rounded-md border border-[#474747] p-4"
-								>
-									{#if showImages && item.img}
-										<figure
-											class="flex flex-col gap-2"
-											transition:slide={{ duration: 150, delay: 0 }}
-										>
-											<img
-												class="h-[320px] w-full max-w-[380px] object-cover"
-												src={item.img}
-												alt={item.name}
-											/>
-											<figcaption class="text-center">
-												<strong class="text-lg font-bold text-theme-secondary">
-													{item.name.toUpperCase()}
-													{#if item.quantity}({item.quantity.toUpperCase()}){/if}
-												</strong>
-											</figcaption>
-										</figure>
-									{:else}
-										<!-- TODO: have the dish names centered or aligned to the left? -->
-										<!-- if menu item does not contain an image -->
-										<strong class="text-lg font-bold text-theme-secondary">
-											{item.name.toUpperCase()}
-											{#if item.quantity}({item.quantity.toUpperCase()}){/if}
-											{#if item.type}
-												({item.type.toUpperCase()})
-											{/if}
-										</strong>
-									{/if}
-									<p>
-										{#if item.size}({item.size}){/if}
-										{#if item.description}{item.description}{/if}
-									</p>
-									<!-- regular item price -->
-									{#if item.price}
-										<strong>${item.price}</strong>
-									{/if}
-									{#each item.variants as variant}
-										<p>
-											{#if variant.name}
-												{variant.name}
-											{/if}
-											{#if variant.size}
-												{variant.size}
-											{/if}
-											{#if variant.name == 'chrysanthemum' || variant.name == 'green tea, earl grey, jasmine'}
-												<br />
-											{/if}
-											{#if variant.price}<strong>${variant.price}</strong>{/if}
-										</p>
-									{/each}
-								</li>
-							{/each}
-						</ul>
-					</section>
-				{/each}
-			{:else}
+			{#if !showDrinks}
 				<!-- food menu -->
 				{#each Object.entries(foodMenu) as [category, items]}
 					<section class="grid gap-4">
@@ -1014,28 +947,27 @@
 											<div class="overflow-hidden rounded-md">
 												<img
 													class="
-														{item.img.includes('Beef Pho') || item.img.includes('King Oyster Mushrooms')
+																{item.img.includes('Beef Pho') || item.img.includes('King Oyster Mushrooms')
 														? 'object-left-bottom'
 														: ''}
-														motion-safe:transition-scale h-[320px] w-full max-w-[380px] object-cover motion-safe:duration-200 motion-safe:hover:scale-150"
+																motion-safe:transition-scale h-[320px] w-full max-w-[380px] object-cover motion-safe:duration-200 motion-safe:hover:scale-150"
 													src={item.img}
 													alt={item.name}
 												/>
 											</div>
-											<!-- TODO: dishes without picture have Dish Name aligned:left, keep it that way or center all? -->
 											<figcaption class="text-center">
 												<strong class="text-lg font-bold text-theme-secondary">
 													{item.name.toUpperCase()}
-													{#if item.quantity}({item.quantity}){/if}
 													{#if item.type}({item.type}){/if}
+													{#if item.quantity}({item.quantity}){/if}
 												</strong>
 											</figcaption>
 										</figure>
 									{:else}
-										<!-- TODO: have the dish names centered or aligned to the left? -->
 										<!-- if menu item does not contain an image -->
 										<strong class="text-lg font-bold text-theme-secondary">
 											{item.name.toUpperCase()}
+											{#if item.type}({item.type}){/if}
 											{#if item.quantity}({item.quantity}){/if}
 										</strong>
 									{/if}
@@ -1059,6 +991,76 @@
 									<!-- addons -->
 									{#each item.addons as addon}
 										<span> {addon.name} + <strong> ${addon.price}</strong></span>
+									{/each}
+								</li>
+							{/each}
+						</ul>
+					</section>
+				{/each}
+			{:else}
+				<!-- drinks menu -->
+				{#each Object.entries(drinkMenu) as [category, items]}
+					<section class="grid gap-4">
+						<h2
+							class="text-center text-3xl font-bold text-theme-secondary selection:bg-[#FFFF00] selection:text-theme-background"
+						>
+							{category.toUpperCase()}
+						</h2>
+						<ul class="flex flex-wrap justify-center gap-4">
+							{#each items as item (item.id)}
+								<li
+									class="flex w-full max-w-[380px] flex-col gap-1 rounded-md border border-[#474747] p-2"
+								>
+									{#if showImages && item.img}
+										<figure
+											class="flex flex-col gap-2"
+											transition:slide={{ duration: 150, delay: 0 }}
+										>
+											<img
+												class="h-[320px] w-full max-w-[380px] object-cover"
+												src={item.img}
+												alt={item.name}
+											/>
+											<figcaption class="text-center">
+												<strong class="text-lg font-bold text-theme-secondary">
+													{item.name.toUpperCase()}
+													{#if item.type}({item.type.toUpperCase()}){/if}
+													{#if item.quantity}({item.quantity.toUpperCase()}){/if}
+												</strong>
+											</figcaption>
+										</figure>
+									{:else}
+										<!-- if menu item does not contain an image -->
+										<strong class="text-lg font-bold text-theme-secondary">
+											{item.name.toUpperCase()}
+											{#if item.type}({item.type.toUpperCase()}){/if}
+											{#if item.quantity}({item.quantity.toUpperCase()}){/if}
+										</strong>
+									{/if}
+
+									<p>
+										{#if item.size}({item.size}){/if}
+										{#if item.description}{item.description}{/if}
+									</p>
+
+									<!-- regular item price -->
+									{#if item.price}
+										<strong>${item.price}</strong>
+									{/if}
+
+									{#each item.variants as variant}
+										<p>
+											{#if variant.name}
+												{variant.name}
+											{/if}
+											{#if variant.size}
+												{variant.size}
+											{/if}
+											{#if variant.name == 'chrysanthemum' || variant.name == 'green tea, earl grey, jasmine'}
+												<br />
+											{/if}
+											{#if variant.price}<strong>${variant.price}</strong>{/if}
+										</p>
 									{/each}
 								</li>
 							{/each}
