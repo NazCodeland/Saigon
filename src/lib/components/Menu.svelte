@@ -912,7 +912,7 @@
 	</div>
 
 	<button
-		class="w-30 hidden select-none rounded border border-[#474747] px-3 py-2 text-gray-300 motion-safe:inline-block"
+		class="w-30 hidden select-none rounded border border-[#474747] px-4 py-2 text-gray-300 motion-safe:inline-block"
 		on:click={() => (showImages = !showImages)}
 	>
 		{#if showImages}

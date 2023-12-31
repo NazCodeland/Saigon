@@ -4,10 +4,8 @@
 	let imageHeight: number;
 </script>
 
-<header
-	class="md:grid md:items-center landscape:m-auto landscape:-mt-4 landscape:w-[132vh]"
-	style="height: {imageHeight}px;"
->
+<!-- TODO: fix landscape mode -->
+<header class="md:grid md:items-center" style="height: {imageHeight}px;">
 	<Logo />
 
 	<!-- hero image -->
