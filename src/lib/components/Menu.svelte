@@ -42,7 +42,7 @@
 		'small plates': [
 			{
 				id: 1,
-				img: '/menu/dishes/small plates/Vegetarian Spring Rolls',
+				img: '/menu/dishes/small-plates/vegetarian-spring-rolls',
 				name: 'Vegetarian Spring Rolls',
 				quantity: '2',
 				type: null,
@@ -54,7 +54,7 @@
 			},
 			{
 				id: 2,
-				img: '/menu/dishes/small plates/Salad Rolls',
+				img: '/menu/dishes/small-plates/salad-rolls',
 				name: 'Salad Rolls',
 				quantity: '2',
 				type: null,
@@ -69,7 +69,7 @@
 			},
 			{
 				id: 3,
-				img: '/menu/dishes/small plates/Papaya Salad',
+				img: '/menu/dishes/small-plates/papaya-salad',
 				name: 'Papaya Salad',
 				quantity: null,
 				type: 'GF',
@@ -81,7 +81,7 @@
 			},
 			{
 				id: 4,
-				img: '/menu/dishes/small plates/Chicken Wings',
+				img: '/menu/dishes/small-plates/chicken-wings',
 				name: 'Chicken Wings',
 				quantity: '5',
 				type: null,
@@ -99,7 +99,7 @@
 			},
 			{
 				id: 5,
-				img: '/menu/dishes/small plates/Braised Pork Belly',
+				img: '/menu/dishes/small-plates/braised-pork-belly',
 				name: 'Braised Pork Belly',
 				quantity: 'Limited Quantity',
 				type: null,
@@ -146,7 +146,7 @@
 			},
 			{
 				id: 9,
-				img: '/menu/dishes/small plates/Stir-Fry Veggies',
+				img: '/menu/dishes/small-plates/stir-fry-veggies',
 				name: 'Stir-Fry Veggies',
 				quantity: null,
 				type: null,
@@ -183,7 +183,7 @@
 		soups: [
 			{
 				id: 1,
-				img: '/menu/dishes/soups/Beef Pho',
+				img: '/menu/dishes/soups/beef-pho',
 				name: 'Beef Pho',
 				quantity: null,
 				type: null,
@@ -198,7 +198,7 @@
 			},
 			{
 				id: 2,
-				img: '/menu/dishes/soups/King Oyster Mushrooms',
+				img: '/menu/dishes/soups/king-oyster-mushrooms',
 				name: 'king oyster mushrooms',
 				quantity: null,
 				type: 'GF',
@@ -348,7 +348,7 @@
 		'specialty items': [
 			{
 				id: 1,
-				img: '/menu/dishes/specialty items/Saigon Taco',
+				img: '/menu/dishes/specialty-items/saigon-taco',
 				name: 'Saigon Taco',
 				quantity: '1',
 				type: null,
@@ -367,7 +367,7 @@
 			},
 			{
 				id: 2,
-				img: '/menu/dishes/specialty items/Saigon Sliders',
+				img: '/menu/dishes/specialty-items/saigon-sliders',
 				name: 'Saigon Sliders',
 				quantity: '2',
 				type: null,
@@ -407,10 +407,10 @@
 	};
 
 	let drinkMenu: { [key: string]: DrinkDetails[] } = {
-		'signature cocktails': [
+		'signature-cocktails': [
 			{
 				id: 1,
-				img: '/menu/drinks/signature cocktails/Spill The Tea',
+				img: '/menu/drinks/signature-cocktails/spill-the-tea',
 				name: 'Spill The Tea',
 				quantity: 'serves 2ppl',
 				type: null,
@@ -422,7 +422,7 @@
 			},
 			{
 				id: 2,
-				img: '/menu/drinks/signature cocktails/Mangos in the market',
+				img: '/menu/drinks/signature-cocktails/mangos-in-the-market',
 				name: 'Mangos in the market',
 				quantity: null,
 				type: null,
@@ -434,7 +434,7 @@
 			},
 			{
 				id: 3,
-				img: `/menu/drinks/signature cocktails/Pop it like it's hot`,
+				img: `/menu/drinks/signature-cocktails/pop-it-like-its-hot`,
 				name: "Pop it like it's hot",
 				quantity: null,
 				type: null,
@@ -445,7 +445,7 @@
 			},
 			{
 				id: 4,
-				img: '/menu/drinks/signature cocktails/Good morning Vietnam',
+				img: '/menu/drinks/signature-cocktails/good-morning-vietnam',
 				name: 'Good morning, Vietnam!',
 				quantity: null,
 				type: null,
@@ -457,7 +457,7 @@
 			},
 			{
 				id: 5,
-				img: '/menu/drinks/signature cocktails/Saigon Mai Tai',
+				img: '/menu/drinks/signature-cocktails/saigon-mai-tai',
 				name: 'Saigon Mai Tai',
 				quantity: null,
 				type: null,
@@ -469,19 +469,19 @@
 			},
 			{
 				id: 6,
-				img: '/menu/drinks/signature cocktails/Tiger Shrike',
+				img: '/menu/drinks/signature-cocktails/tiger-shrike',
 				name: 'Tiger Shrike',
 				quantity: null,
 				type: null,
 				size: '2 oz',
 				description:
-					'Beefeater gin, Campari, lychee, lemon, simple syrup. One of our most popular signature cocktails is fruity, refreshing and fragrant.',
+					'Beefeater gin, Campari, lychee, lemon, simple syrup. One of our most popular signature-cocktails is fruity, refreshing and fragrant.',
 				variants: [],
 				price: 16
 			},
 			{
 				id: 7,
-				img: '/menu/drinks/signature cocktails/Pho Old Fashioned',
+				img: '/menu/drinks/signature-cocktails/pho-old-fashioned',
 				name: 'Pho Old Fashioned',
 				quantity: null,
 				type: null,
@@ -493,7 +493,7 @@
 			},
 			{
 				id: 8,
-				img: '/menu/drinks/signature cocktails/Ume Sour',
+				img: '/menu/drinks/signature-cocktails/ume-sour',
 				name: 'Ume Sour',
 				quantity: null,
 				type: null,
@@ -504,7 +504,7 @@
 			},
 			{
 				id: 9,
-				img: '/menu/drinks/signature cocktails/District 1 Mojito',
+				img: '/menu/drinks/signature-cocktails/District 1 Mojito',
 				name: 'District 1 Mojito',
 				quantity: null,
 				type: null,
