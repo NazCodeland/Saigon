@@ -10,8 +10,9 @@
 
 	<!-- hero image -->
 	<div bind:clientHeight={imageHeight} class="absolute right-0 top-0 -z-10 w-full">
+		<!--  landscape:h-[86vh]  -->
 		<img
-			class="m-auto object-contain object-top md:max-h-[100vh] landscape:h-[86vh]"
+			class="m-auto object-contain object-top md:max-h-[100vh]"
 			src="hero-image.jpg"
 			alt="Saigon Logo"
 		/>
