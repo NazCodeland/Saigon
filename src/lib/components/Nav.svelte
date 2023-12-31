@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { browser } from '$app/environment';
 	import { navStore, toggleNav } from '$lib/stores/navStore';
 	import { slide } from 'svelte/transition';
 
@@ -7,7 +6,7 @@
 	let navItems = [
 		{ name: 'Menu', url: '/#menu' },
 		{ name: 'Reservations', url: 'https://www.tbdine.com/book/restaurant/saigon-restaurant?idApp=70479&language=en-us' },
-		{ name: 'Contact', url: '#contact' },
+		{ name: 'Contact', url: 'https://www.tbdine.com/book/restaurant/saigon-restaurant?idApp=70479&language=en-us' },
 		{ name: 'Order Online', url: 'https://www.ubereats.com/store/saigon-restaurant/nApsyLBYUdWMrTVkXtkPfQ?diningMode=DELIVERY' }
 	];
 
@@ -16,7 +15,6 @@
 	$: {
 		if (innerWidth >= 808 || outerWidth >= 808) {
 			navStore.set(true);
-			console.log('innerWidth', innerWidth);
 		}
 	}
 </script>
@@ -28,21 +26,17 @@
 	on:click={toggleNav}
 	type="button"
 	tabindex="0"
-	class="absolute right-0 top-12 md:hidden"
+	class="absolute right-4 top-16 md:hidden"
 	aria-label="menu"
 >
 	<img src="hamburger.svg" alt="menu icon" />
 </button>
 
 {#if $navStore}
-	<nav
-		in:slide
-		out:slide
-		class="select-none border-t-2 border-theme-primary shadow-md md:border-none md:shadow-none"
-	>
-		<ul class="flex flex-col items-center gap-2 p-4 md:flex-row md:justify-evenly md:gap-8">
+	<nav in:slide out:slide class=" w-full select-none border-t-2 border-theme-primary shadow-md">
+		<ul class=" flex flex-row flex-wrap items-center justify-evenly gap-2 py-4">
 			{#each navItems as item (item.name)}
-				<li class="whitespace-nowrap bg-theme-background px-1 py-0.5 md:text-xl">
+				<li class="whitespace-nowrap px-1 py-0.5 text-xs md:text-lg">
 					<a class="" href={item.url}>{item.name.toUpperCase()}</a>
 				</li>
 			{/each}
