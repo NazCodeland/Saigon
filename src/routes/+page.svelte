@@ -9,8 +9,10 @@
 <main
 	class="m-auto flex max-w-[1230px] flex-col gap-24 p-4 font-restaurant text-base text-theme-text"
 >
-	<Header />
-	<Menu />
+	<div>
+		<Header />
+		<Menu />
+	</div>
 
 	<div id="hours" class="flex flex-wrap justify-center gap-8">
 		<Hours />

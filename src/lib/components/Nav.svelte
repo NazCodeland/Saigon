@@ -22,7 +22,7 @@
 <svelte:window bind:innerWidth bind:outerWidth />
 
 <!-- hamburger icon button -->
-<button
+<!-- <button
 	on:click={toggleNav}
 	type="button"
 	tabindex="0"
@@ -30,7 +30,7 @@
 	aria-label="menu"
 >
 	<img src="hamburger.svg" alt="menu icon" />
-</button>
+</button> -->
 
 {#if $navStore}
 	<nav in:slide out:slide class=" w-full select-none border-t-2 border-theme-primary shadow-md">
