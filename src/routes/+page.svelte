@@ -6,7 +6,9 @@
 	import Footer from '$lib/components/Footer.svelte';
 </script>
 
-<main class="m-auto flex max-w-[1230px] flex-col p-4 font-restaurant text-base text-theme-text">
+<main
+	class="m-auto flex max-w-[1230px] flex-col gap-24 p-4 font-restaurant text-base text-theme-text"
+>
 	<Header />
 	<Menu />
 
