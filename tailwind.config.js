@@ -18,6 +18,9 @@ export default {
 			md: '808px',
 			phone: '640px',
 			tablet: '1024px'
+		},
+		boxShadow: {
+			glow: '0 0 10px var(--theme-color-primary), 0 0 5px var(--theme-color-primary)'
 		}
 	},
 
