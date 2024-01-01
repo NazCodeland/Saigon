@@ -15,7 +15,7 @@
 		<Menu />
 	</div>
 
-	<section class="grid gap-16 rounded-md" id="hours">
+	<section class="grid gap-8 rounded-md md:gap-16" id="hours">
 		<h2
 			class="text-center text-3xl font-bold selection:bg-[#FFFF00]
 			selection:text-theme-background"
@@ -28,7 +28,7 @@
 		</div>
 	</section>
 
-	<section class="grid gap-16 rounded-md" id="contact">
+	<section class="grid gap-8 rounded-md md:gap-16" id="contact">
 		<h2
 			class=" text-center text-3xl font-bold selection:bg-[#FFFF00]
 			selection:text-theme-background"
