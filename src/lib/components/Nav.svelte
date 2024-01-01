@@ -3,10 +3,10 @@
 	import { slide } from 'svelte/transition';
 
 	// prettier-ignore
+	// { name: 'Contact', url: 'https://www.tbdine.com/book/restaurant/saigon-restaurant?idApp=70479&language=en-us' },
 	let navItems = [
 		{ name: 'Menu', url: '/#menu' },
 		{ name: 'Reservations', url: 'https://www.tbdine.com/book/restaurant/saigon-restaurant?idApp=70479&language=en-us' },
-		{ name: 'Contact', url: '/#contact' },
 		{ name: 'Order Online', url: 'https://www.ubereats.com/store/saigon-restaurant/nApsyLBYUdWMrTVkXtkPfQ?diningMode=DELIVERY' }
 	];
 
