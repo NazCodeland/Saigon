@@ -20,7 +20,7 @@
 			class="text-center text-3xl font-bold selection:bg-[#FFFF00]
 			selection:text-theme-background"
 		>
-			Hour & Location
+			Hours & Location
 		</h2>
 		<div class="flex flex-wrap justify-center gap-8">
 			<Hours />
