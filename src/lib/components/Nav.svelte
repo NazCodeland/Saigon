@@ -6,7 +6,7 @@
 	let navItems = [
 		{ name: 'Menu', url: '/#menu' },
 		{ name: 'Reservations', url: 'https://www.tbdine.com/book/restaurant/saigon-restaurant?idApp=70479&language=en-us' },
-		{ name: 'Contact', url: 'https://www.tbdine.com/book/restaurant/saigon-restaurant?idApp=70479&language=en-us' },
+		{ name: 'Contact', url: '/#contact' },
 		{ name: 'Order Online', url: 'https://www.ubereats.com/store/saigon-restaurant/nApsyLBYUdWMrTVkXtkPfQ?diningMode=DELIVERY' }
 	];
 
@@ -36,7 +36,7 @@
 	<nav
 		in:slide
 		out:slide
-		class=" w-full select-none border-t-2 border-theme-primary shadow-md md:bg-transparent"
+		class=" shadow-md w-full select-none border-t-2 border-theme-primary md:bg-transparent"
 	>
 		<ul class=" flex flex-row flex-wrap items-center justify-evenly gap-2 py-4">
 			{#each navItems as item (item.name)}
