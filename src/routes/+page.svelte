@@ -11,8 +11,8 @@
 	class="m-auto flex max-w-[1230px] flex-col gap-32 p-4 font-restaurant text-base text-theme-text"
 >
 	<div>
-		<Header />
-		<Menu />
+		<!-- <Header /> -->
+		<!-- <Menu /> -->
 	</div>
 
 	<section class="grid gap-16 rounded-md" id="hours">
