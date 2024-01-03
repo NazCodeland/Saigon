@@ -961,7 +961,7 @@
 											<figcaption class="text-center">
 												<strong class="text-lg font-bold text-theme-secondary">
 													{item.name.toUpperCase()}
-													{#if item.type}({item.type}){/if}
+													{#if item.type}({item.type.toUpperCase()}){/if}
 													{#if item.quantity}({item.quantity}){/if}
 												</strong>
 											</figcaption>
@@ -970,7 +970,7 @@
 										<!-- if menu item does not contain an image -->
 										<strong class="text-lg font-bold text-theme-secondary">
 											{item.name.toUpperCase()}
-											{#if item.type}({item.type}){/if}
+											{#if item.type}({item.type.toUpperCase()}){/if}
 											{#if item.quantity}({item.quantity}){/if}
 										</strong>
 									{/if}
