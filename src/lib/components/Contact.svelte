@@ -5,7 +5,7 @@
 	import instagramIcon from '$lib/icons/instagram.svg';
 </script>
 
-<ul class="flex flex-col gap-8">
+<ul class="m-auto flex flex-col gap-8 pb-16">
 	<li>
 		<address>
 			<a
