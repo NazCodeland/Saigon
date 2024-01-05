@@ -20,7 +20,7 @@ export default {
 			tablet: '1024px'
 		},
 		boxShadow: {
-			glow: '0 0 10px var(--theme-color-primary), 0 0 5px var(--theme-color-primary)'
+			glow: '0 0 6px var(--theme-color-primary), 0 0 1px var(--theme-color-primary)'
 		}
 	},
 

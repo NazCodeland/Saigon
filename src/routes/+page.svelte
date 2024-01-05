@@ -5,16 +5,20 @@
 	import Header from '$lib/components/Header.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 	import Contact from '$lib/components/Contact.svelte';
+	import Nav from '$lib/components/Nav.svelte';
 </script>
 
 <main
 	class="m-auto flex max-w-[1230px] flex-col gap-32 p-4 font-restaurant text-base text-theme-text"
 >
-	<div>
+	<section>
 		<Header />
-		<Menu />
-	</div>
+		<Nav />
+	</section>
 
+	<Menu />
+
+	<!-- hours & location -->
 	<section class="grid gap-8 rounded-md md:gap-16" id="hours">
 		<h2
 			class="text-center text-3xl font-bold selection:bg-[#FFFF00]
@@ -28,14 +32,15 @@
 		</div>
 	</section>
 
+	<!-- contact section -->
 	<section class="grid gap-8 rounded-md md:gap-16" id="contact">
 		<h2
 			class=" text-center text-3xl font-bold selection:bg-[#FFFF00]
 			selection:text-theme-background"
 		>
-			<!-- Contact -->
+			Contact
 		</h2>
-		<!-- <Contact /> -->
+		<Contact />
 	</section>
 
 	<!-- <Footer /> -->

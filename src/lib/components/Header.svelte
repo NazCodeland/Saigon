@@ -1,6 +1,5 @@
 <script lang="ts">
 	import Logo from './Logo.svelte';
-	import Nav from './Nav.svelte';
 
 	// note to future self: the `Nav` component and everything after it, are spaced
 	// away from the top of the site by the distance of the `header` element.
@@ -34,9 +33,6 @@
 		</picture>
 	</div>
 </header>
-
-<!-- Nav component needs to be kept out of `header` element (it's not a mistake) -->
-<Nav />
 
 <style>
 </style>

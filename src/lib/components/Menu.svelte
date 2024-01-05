@@ -895,15 +895,17 @@
 	};
 </script>
 
-<div class="mt-24 flex flex-col items-center gap-8" id="menu">
+<section class="flex flex-col items-center gap-8" id="menu">
 	<div class="flex flex-wrap items-center justify-center gap-2">
 		<button
+			type="button"
 			class="w-32 select-none rounded border py-2 {showDrinks ? '' : ' border-theme-primary '}"
 			on:click={() => (showDrinks = false)}
 		>
 			FOOD
 		</button>
 		<button
+			type="button"
 			class="w-32 select-none rounded border py-2 {showDrinks ? ' border-theme-primary' : ''}"
 			on:click={() => (showDrinks = true)}
 		>
@@ -912,6 +914,7 @@
 	</div>
 
 	<button
+		type="button"
 		class="w-30 hidden select-none whitespace-nowrap rounded border border-[#474747] px-4 py-2 text-gray-300 motion-safe:inline-block"
 		on:click={() => (showImages = !showImages)}
 	>
@@ -1078,7 +1081,7 @@
 			{/if}
 		</div>
 	{/key}
-</div>
+</section>
 
 <style>
 </style>

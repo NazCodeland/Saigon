@@ -1,20 +1,36 @@
-<script>
+<script lang="ts">
 	import locationIcon from '$lib/icons/location.svg';
 	import phoneIcon from '$lib/icons/phone.svg';
 	import emailIcon from '$lib/icons/email.svg';
 	import instagramIcon from '$lib/icons/instagram.svg';
 
-	let name = '';
-	let email = '';
-	let message = '';
+	let name: string = '';
+	let email: string = '';
+	let message: string = '';
+	let isSending: boolean = false;
+	let formStatus: string = '';
 
-	const handleSubmit = () => {
-		// Handle form submission logic here
-		alert(`Name: ${name}\nEmail: ${email}\nMessage: ${message}`);
-	};
+	async function handleSubmit(event: Event) {
+		isSending = true;
+		formStatus = 'Sending...';
+
+		const formData = new FormData(event.target as HTMLFormElement);
+		try {
+			await fetch('/api/form', {
+				method: 'POST',
+				body: formData
+			});
+			isSending = false;
+			formStatus = 'Your message has been sent.';
+		} catch (error) {
+			console.error(error);
+			isSending = false;
+			formStatus = 'Something went wrong, please try again.';
+		}
+	}
 </script>
 
-<div class=" flex flex-wrap content-start justify-center gap-32">
+<div class="flex flex-wrap justify-evenly gap-16">
 	<ul class="flex flex-col gap-8">
 		<li>
 			<address>
@@ -31,28 +47,35 @@
 			>
 		</li>
 		<li>
-			<a class="flex items-center gap-8" href="mailto:email@example.com">
-				<img src={emailIcon} alt="" /> email@example.com</a
+			<a class="flex items-center gap-8" href="mailto:info@saigonottawa.com">
+				<img src={emailIcon} alt="" /> info@saigonottawa.com</a
 			>
 		</li>
-		<li class="flex items-center gap-8 px-[18px]">
-			<a href="https://www.instagram.com/saigonottawa/" target="_blank" rel="noopener">
-				<img src={instagramIcon} alt="" />
+		<li>
+			<a
+				class="flex items-center gap-8"
+				href="https://www.instagram.com/saigonottawa/"
+				target="_blank"
+				rel="noopener"
+			>
+				<img src={instagramIcon} alt="" /> @saigonottawa
 			</a>
 		</li>
 	</ul>
 
-	<form
-		id="contact"
-		class="flex w-full max-w-[400px] flex-col gap-4"
-		on:submit|preventDefault={handleSubmit}
-	>
+	<form on:submit|preventDefault={handleSubmit} class="flex w-full max-w-[400px] flex-col gap-4">
+		<p>
+			Feel free to use the form below to reach out to us. Please provide your <i>name</i>,
+			<i>email</i>, and
+			<i>message</i>. We will get back to you as soon as possible.
+		</p>
+		<hr />
 		<label for="name" class="flex flex-col gap-0.5">
 			Name
 			<input
 				id="name"
 				type="text"
-				bind:value={name}
+				name="name"
 				required
 				class="rounded-md px-3 py-2 font-semibold text-slate-950 outline-none focus:shadow-glow"
 			/>
@@ -63,7 +86,7 @@
 			<input
 				id="email"
 				type="email"
-				bind:value={email}
+				name="email"
 				required
 				class=" rounded-md px-3 py-2 font-semibold text-slate-950 outline-none focus:shadow-glow"
 			/>
@@ -73,18 +96,26 @@
 			Message
 			<textarea
 				id="message"
-				bind:value={message}
+				name="message"
 				required
 				rows="5"
 				class="rounded-md border px-3 py-2 font-semibold text-slate-950 outline-none focus:shadow-glow"
 			></textarea>
 		</label>
 
+		{#if isSending}
+			<p>Sending...</p>
+		{:else if formStatus === 'Your message has been sent.'}
+			<p class="rounded-md bg-green-700 px-4 py-1">{formStatus}</p>
+		{:else if formStatus === 'Something went wrong, please try again.'}
+			<p class="rounded-md bg-red-600 px-4 py-1">{formStatus}</p>
+		{/if}
+
 		<button
 			type="submit"
 			class="shadow-sm inline-flex w-full justify-center rounded-md border px-4 py-2 text-sm font-medium"
 		>
-			Send
+			Send Message
 		</button>
 	</form>
 </div>
