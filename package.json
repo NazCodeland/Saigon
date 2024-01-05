@@ -41,6 +41,9 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@sveltejs/adapter-static": "^3.0.1"
+		"@sveltejs/adapter-static": "^3.0.1",
+		"@types/nodemailer": "^6.4.14",
+		"nodemailer": "^6.9.8",
+		"zod": "^3.22.4"
 	}
 }
