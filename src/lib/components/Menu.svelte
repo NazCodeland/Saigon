@@ -504,7 +504,7 @@
 			},
 			{
 				id: 9,
-				img: '/menu/drinks/signature-cocktails/District 1 Mojito',
+				img: '/menu/drinks/signature-cocktails/district-1-mojito',
 				name: 'District 1 Mojito',
 				quantity: null,
 				type: null,
