@@ -158,7 +158,7 @@
 			},
 			{
 				id: 10,
-				img: null,
+				img: '/menu/dishes/small-plates/fried-wonton',
 				name: 'Fried Wonton',
 				quantity: null,
 				type: null,
@@ -169,7 +169,7 @@
 			},
 			{
 				id: 11,
-				img: null,
+				img: '/menu/dishes/small-plates/steamed-wonton',
 				name: 'Steamed wonton',
 				quantity: null,
 				type: null,
@@ -210,7 +210,7 @@
 			},
 			{
 				id: 3,
-				img: null,
+				img: '/menu/dishes/soups/wonton-noodle',
 				name: 'Wonton Noodle',
 				quantity: null,
 				type: null,
@@ -298,7 +298,7 @@
 			},
 			{
 				id: 2,
-				img: null,
+				img: '/menu/dishes/vermicelli-plates/grilled-beef',
 				name: 'Grilled Beef',
 				quantity: null,
 				type: null,
@@ -952,10 +952,12 @@
 												<source srcset="{item.img}.webp" type="image/webp" />
 												<img
 													loading="lazy"
-													class="{item.img.includes('Beef Pho') ||
-													item.img.includes('King Oyster Mushrooms')
+													class="{item.img.includes('beef-pho') ||
+													item.img.includes('king-oyster-mushrooms')
 														? 'object-left-bottom'
-														: ''} motion-safe:transition-scale h-[320px] w-full max-w-[380px] object-cover motion-safe:duration-200 motion-safe:hover:scale-150"
+														: ''}
+													{item.img.includes('steamed-wonton') ? 'object-right' : ''}
+														motion-safe:transition-scale h-[320px] w-full max-w-[380px] object-cover motion-safe:duration-200 motion-safe:hover:scale-150"
 													src="{item.img}.webp"
 													alt={item.name}
 												/>
