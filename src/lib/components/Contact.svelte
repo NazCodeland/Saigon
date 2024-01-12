@@ -4,31 +4,36 @@
 	import emailIcon from '$lib/icons/email.svg';
 	import instagramIcon from '$lib/icons/instagram.svg';
 
-	let name: string = '';
-	let email: string = '';
-	let message: string = '';
-	let isSending: boolean = false;
-	let formStatus: string = '';
+	let formStatus = {
+		isSending: false,
+		message: '',
+		color: ''
+	};
 
 	async function handleSubmit(event: SubmitEvent) {
-		isSending = true;
-		formStatus = 'Sending...';
+		formStatus.isSending = true;
+		formStatus.message = 'Sending...';
 
 		if (event.target) {
 			const formData = new FormData(event.target as HTMLFormElement);
+			let emailResponseBody;
 			try {
-				const res = await fetch('https://sendgrid-email-worker.jason-f38.workers.dev', {
+				const emailResponse = await fetch('https://sendgrid-email-worker.jason-f38.workers.dev', {
 					method: 'POST',
 					body: formData
 				});
-				console.log('res', res);
-				isSending = false;
-				formStatus = 'Your message has been sent.';
+				emailResponseBody = await emailResponse.json();
+				formStatus.isSending = false;
+				formStatus.message = emailResponseBody.message;
+				formStatus.color = 'bg-green-700';
+
 				//
 			} catch (error) {
-				console.error(error);
-				isSending = false;
-				formStatus = 'Something went wrong, please try again.';
+				console.error('Error occurred within handleSubmit:', error);
+				formStatus.isSending = false;
+				formStatus.message =
+					emailResponseBody?.message || 'An unexpected error occurred, please try again.';
+				formStatus.color = 'bg-red-600';
 			}
 		}
 	}
@@ -66,6 +71,7 @@
 			</a>
 		</li>
 	</ul>
+
 	<form on:submit|preventDefault={handleSubmit} class="flex w-full max-w-[400px] flex-col gap-4">
 		<p>
 			Feel free to use the form below to reach out to us. Please provide your <i>name</i>,
@@ -106,12 +112,10 @@
 			></textarea>
 		</label>
 
-		{#if isSending}
+		{#if formStatus.isSending}
 			<p>Sending...</p>
-		{:else if formStatus === 'Your message has been sent.'}
-			<p class="rounded-md bg-green-700 px-4 py-1">{formStatus}</p>
-		{:else if formStatus === 'Something went wrong, please try again.'}
-			<p class="rounded-md bg-red-600 px-4 py-1">{formStatus}</p>
+		{:else}
+			<p class="rounded-md {formStatus.color} px-4 py-1">{formStatus.message}</p>
 		{/if}
 
 		<button
