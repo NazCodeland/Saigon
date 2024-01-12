@@ -34,8 +34,8 @@
 	}
 </script>
 
-<div class="flex flex-wrap justify-evenly gap-16">
-	<ul class="m-auto flex flex-col gap-8 pb-16">
+<div class="flex flex-wrap items-center justify-evenly gap-16">
+	<ul class="flex flex-col gap-8 pb-16">
 		<li>
 			<address>
 				<a
@@ -69,7 +69,7 @@
 	<form on:submit|preventDefault={handleSubmit} class="flex w-full max-w-[400px] flex-col gap-4">
 		<p>
 			Feel free to use the form below to reach out to us. Please provide your <i>name</i>,
-			<i>email</i>, and
+			<i>email</i>, and your
 			<i>message</i>. We will get back to you as soon as possible.
 		</p>
 		<hr />

@@ -8,9 +8,9 @@
 	import Nav from '$lib/components/Nav.svelte';
 </script>
 
-<main
-	class="m-auto flex max-w-[1230px] flex-col gap-32 p-4 font-restaurant text-base text-theme-text"
->
+<!-- prettier-ignore -->
+<main class="m-auto flex max-w-[1230px] flex-col gap-32 p-4 font-restaurant text-base text-theme-text">
+	
 	<section>
 		<Header />
 		<Nav />
@@ -43,7 +43,7 @@
 		<Contact />
 	</section>
 
-	<!-- <Footer /> -->
+	<Footer />
 </main>
 
 <style>
