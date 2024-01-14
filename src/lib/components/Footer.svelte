@@ -8,7 +8,12 @@
 	</span>
 	<span>
 		| Site by
-		<a class="inline-flex gap-0.5 text-[#6095F5] hover:underline" href="http://NazCodeland.dev">
+		<a
+			class="inline-flex text-[#6095F5] hover:underline"
+			href="http://NazCodeland.dev"
+			rel="noopener noreferrer"
+			target="_blank"
+		>
 			NazCodeland <img class="inline-block" src={externalLink} alt="" />
 		</a>
 	</span>
