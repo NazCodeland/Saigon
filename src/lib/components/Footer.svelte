@@ -9,7 +9,7 @@
 	<span>
 		| Site by
 		<a
-			class="inline-flex items-center border-b border-[#6095F5]"
+			class="inline-flex items-center border-b border-[#6095F5] hover:text-[#6095F5]"
 			href="http://NazCodeland.dev"
 			rel="noopener noreferrer"
 			target="_blank"
