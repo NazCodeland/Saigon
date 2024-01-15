@@ -29,7 +29,7 @@
 	class="absolute right-4 top-16 md:hidden"
 	aria-label="menu"
 >
-	<img src="hamburger.svg" alt="menu icon" />
+	<img src="hamburger.svg" alt="" aria-label="menu icon" />
 </button> -->
 
 {#if $navStore}

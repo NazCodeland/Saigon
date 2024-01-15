@@ -14,7 +14,7 @@
 </script>
 
 <!-- TODO: fix landscape mode -->
-<header class="grid items-center" style="height: {imageHeight}px;">
+<header class="grid select-none items-center" style="height: {imageHeight}px;">
 	<Logo />
 
 	<!-- hero image -->
@@ -28,7 +28,8 @@
 			<img
 				class="m-auto object-contain object-top md:max-h-[100vh]"
 				src="hero/hero-image.webp"
-				alt="A variety of Vietnamese dishes including a bowl of pho, a plate with spring rolls wrapped in green lettuce, grilled meat topped with chopped green onions, clams in a light broth, and a large salad with mixed greens."
+				alt=""
+				aria-label="A variety of Vietnamese dishes including a bowl of pho, a plate with spring rolls wrapped in green lettuce, grilled meat topped with chopped green onions, clams in a light broth, and a large salad with mixed greens."
 			/>
 		</picture>
 	</div>

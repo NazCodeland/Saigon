@@ -46,18 +46,21 @@
 				<a
 					class="flex items-center gap-8"
 					href="https://maps.google.com/?q=85+Clarence+St,+Ottawa+ON+K1N+5P5"
-					target="_blank"><img src={locationIcon} alt="" />85 Clarence St, Ottawa ON K1N 5P5</a
+					target="_blank"
 				>
+					<img src={locationIcon} alt="" aria-label="location icon" />85 Clarence St, Ottawa ON K1N
+					5P5
+				</a>
 			</address>
 		</li>
 		<li>
 			<a class="flex items-center gap-8" href="tel:6136958887">
-				<img src={phoneIcon} alt="" /> 613-695-8887</a
+				<img src={phoneIcon} alt="" aria-label="phone icon" /> 613-695-8887</a
 			>
 		</li>
 		<li>
 			<a class="flex items-center gap-8" href="mailto:info@saigonottawa.com">
-				<img src={emailIcon} alt="" /> info@saigonottawa.com</a
+				<img src={emailIcon} alt="" aria-label="email icon" /> info@saigonottawa.com</a
 			>
 		</li>
 		<li>
@@ -67,7 +70,7 @@
 				target="_blank"
 				rel="noopener"
 			>
-				<img src={instagramIcon} alt="" /> @saigonottawa
+				<img src={instagramIcon} alt="" aria-label="instagram icon" /> @saigonottawa
 			</a>
 		</li>
 	</ul>

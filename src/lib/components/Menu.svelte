@@ -947,7 +947,7 @@
 											class="flex flex-col gap-2"
 											transition:slide={{ duration: 150, delay: 0 }}
 										>
-											<picture class="overflow-hidden rounded-md">
+											<picture class="select-none overflow-hidden rounded-md">
 												<source srcset="{item.img}.avif" type="image/avif" />
 												<source srcset="{item.img}.webp" type="image/webp" />
 												<img
@@ -1024,7 +1024,7 @@
 											class="flex flex-col gap-2"
 											transition:slide={{ duration: 150, delay: 0 }}
 										>
-											<picture>
+											<picture class="select-none">
 												<source srcset="{item.img}.avif" type="image/avif" />
 												<source srcset="{item.img}.webp" type="image/webp" />
 												<img
