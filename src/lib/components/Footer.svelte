@@ -6,7 +6,7 @@
 
 <footer class="ml-auto text-sm">
 	<span>
-		&copy; {currentYear} <strong>Saigon</strong>
+		&copy; {currentYear} <strong>Saigon Ottawa</strong>
 	</span>
 	<span>
 		| Site by
