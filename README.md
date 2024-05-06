@@ -1,6 +1,6 @@
 # Saigon Restaurant Website
 
-This is a static website designed for a restaurant, it provides a straightforward navigation for customers to explore the menu, make reservations, contact the restaurant, and order online.
+This is a static website designed for [Saigon Restaurant](https://saigonottawa.com/), it provides a straightforward navigation for customers to explore the menu, make reservations, contact the restaurant, and order online.
 
 ## Features
 
