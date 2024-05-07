@@ -3,8 +3,6 @@
 
 [Saigon Restaurant](https://saigonottawa.com/) approached me with the need for a static website that would provide their customers a user-friendly interface. The client already had a website and provided two additional websites as examples of websites that they liked. This allowed me to bypass the design phase typically done in Figma and iterate directly in development.
 
-<br/>
-
 ## Client's Requirements
 1. **Easy Navigation:** The client wanted an easy-to-navigate website where everything was accessible with minimal clicks.
    
@@ -29,23 +27,23 @@
   
 5. **Interactive Menu:**  The restaurant menu prominently features interactive `FOOD` and `DRINKS` buttons within the _viewport_ across a range of screen sizes, from 320px to 1024px. This directly addresses the client's need for the food and drinks menus to be the main focus of the website. Additionally, a `hide images` button is provided that hides all the images of food and drink items, allowing more items to be displayed in the viewport and thus reducing extensive scrolling as per the client's requirement.
 
-   ### Features
-    - **Reservations:** Allows customers to book a table in advance, ensuring a seamless dining experience, powed by TouchBistro.
-      
-    - **Contact:** Provides contact information and a form for customers to reach out with any questions or feedback.
-      
-    - **Order Online:** powered by Uber Eats.
+   ### Takeaways
+      - Throughout the development process, I used [ngrok](https://ngrok.com/) to provide the client with live updates of each section of the site. This allowed the client to provide feedback in real-time, ensuring that the final product would align with their vision. This made the development experience amazing as I was able to iterate very fast. I understand I won't be able to do this with all clients but when it works, it’s simply fantastic.
 
-    ### Technologies Used
-    ![Svelte](https://img.shields.io/badge/svelte-%23f1413d.svg?style=for-the-badge&logo=svelte&logoColor=white) ![SvelteKit](https://img.shields.io/badge/SvelteKit-%23f1413d.svg?style=for-the-badge&logo=svelte&logoColor=white) ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white) ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
+## Features
+   - **Reservations:** Allows customers to book a table in advance, ensuring a seamless dining experience, powed by TouchBistro.
+      
+   - **Contact:** Provides contact information and a form for customers to reach out with any questions or feedback.
+      
+   - **Order Online:** powered by Uber Eats.
+
+   ### Technologies Used
+   ![Svelte](https://img.shields.io/badge/svelte-%23f1413d.svg?style=for-the-badge&logo=svelte&logoColor=white) ![SvelteKit](https://img.shields.io/badge/SvelteKit-%23f1413d.svg?style=for-the-badge&logo=svelte&logoColor=white) ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white) ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
 
 <br/>
 
-## What I Learned
-### Iterative Development and Client Feedback
-Throughout the development process, I used ngrok to provide the client with live updates of each section of the site. This allowed the client to provide feedback in real-time, ensuring that the final product would align with their vision.
+## Challenges
 
-**Challenges and Solutions:**
 1. **Contact Form Implementation:** Implementing a functional contact form was a significant challenge. I initially tried using Nodemailer, a Node.js package, but found it wasn't supported in the Cloudflare Workers environment. I then switched to fabform.io, but found limitations such as the inability to customize the "from" part of the email and handle post-submission behaviour. Eventually, I discovered that SendGrid provides RESTful APIs, which are universally compatible and can be used in any environment that supports HTTP requests. This was the solution I implemented.
    
 3. **Platform Considerations:** While Nodemailer does work on Vercel, I chose not to use this option because the main site was already being hosted on Cloudflare Pages.
