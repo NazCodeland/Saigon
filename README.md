@@ -49,7 +49,7 @@
       - Through these iterations, I learned the importance of understanding the environment in which your code will run and ensuring compatibility between your chosen technologies. This project was a valuable learning experience.
    
    
-   ### What I learned
+   ### New Learnings
       - **Cloudflare Pages and Workers**: Gained experience working with Cloudflare's hosting and serverless platform.
       
       - **Newsletter Form with Brevo.com**: Learned how to set up a newsletter form using Brevo.com.
