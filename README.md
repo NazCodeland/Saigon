@@ -15,7 +15,7 @@
 <br/>
 
 ## Development Approach 
-1. **Single Page Site Design:** I decided to develop the entire site as a single page with different sections. This approach makes everything within the site accessible with just one click, providing ease of navigation.
+1. **Single Page Site:** I decided to develop the entire site as a single page with different sections. This approach makes everything within the site accessible with just one click, providing ease of navigation.
    
 3. **Visible Main Navigation:** In alignment with the client's current site and the two examples they provided, I developed a 'hamburger menu' design for mobile viewports. I also developed an alternative main navigation that is always visible on both mobile and desktop viewports. I explained the benefits of this approach to the client, particularly its ease of access. The client preferred the always-visible navigation.
   
