@@ -30,15 +30,9 @@
 
    ### Takeaways
       - Throughout the development process, I used [ngrok](https://ngrok.com/) to provide the client with live updates of each section of the site. This allowed the client to provide feedback in real-time, ensuring that the final product would align with their vision. This made the development experience amazing as I was able to iterate very fast. I understand I won't be able to do this with all clients but when it works, it’s simply fantastic.
+
    
-   ### Features
-      - **Reservations:** Allows customers to book a table in advance, ensuring a seamless dining experience, powed by TouchBistro.
-         
-      - **Contact:** Provides contact information and a form for customers to reach out with any questions or feedback.
-         
-      - **Order Online:** powered by Uber Eats.
-   
-      ### Technologies Used
+   ### Technologies Used
       ![Svelte](https://img.shields.io/badge/svelte-%23f1413d.svg?style=for-the-badge&logo=svelte&logoColor=white) ![SvelteKit](https://img.shields.io/badge/SvelteKit-%23f1413d.svg?style=for-the-badge&logo=svelte&logoColor=white) ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white) ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white) ![Cloudflare](https://img.shields.io/badge/Cloudflare-F38020?style=for-the-badge&logo=Cloudflare&logoColor=white)
 
 <br/>
