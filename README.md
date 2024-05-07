@@ -39,8 +39,7 @@
 
 ## Challenges
 
-1. **Contact Form Implementation:** Implementing a functional contact form was a significant challenge. Initially I tried, `Nodemailer`, a Node.js package, but found it wasn't supported in the Cloudflare Workers environment. I then switched to `fabform.io`, but found limitations such as the inability to customize the **from** part of the email and handle post-submission behaviour.
-   - Eventually, I discovered that SendGrid provides `RESTful APIs`, which are universally compatible and can be used in any environment that supports HTTP requests. This was the solution I implemented.
+1. **Contact Form Implementation:** Implementing a functional contact form was a significant challenge. Initially I tried, `Nodemailer`, a Node.js package, but found it wasn't supported in the Cloudflare Workers environment. I then switched to `fabform.io`, but found limitations such as the inability to customize the **from** part of the email and handle post-submission behaviour. Eventually, I discovered that SendGrid provides `RESTful APIs`, which are universally compatible and can be used in any environment that supports HTTP requests. This was the solution I implemented.
    
 4. **Platform Considerations:** While Nodemailer does work on Vercel, I chose not to use this option because the main site was already being hosted on Cloudflare Pages.
    
