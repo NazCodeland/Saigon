@@ -17,7 +17,7 @@
 ## Development Approach 
 1. **Single Page Site:** I decided to develop the entire site as a single page with different sections. This approach makes everything within the site accessible with just one click, providing ease of navigation.
    
-3. **Visible Main Navigation:** In alignment with the client's current site and the two examples they provided, I developed a 'hamburger menu' design for mobile viewports. I also developed an alternative main navigation that is always visible on both mobile and desktop viewports. I explained the benefits of this approach to the client, particularly its ease of access. The client preferred the always-visible navigation.
+3. **Visible Main Navigation:** In alignment with the client's current site and the two examples they provided, I developed a 'hamburger menu' design for mobile viewports and an alternative main navigation that is always visible on both mobile and desktop viewports. After explaining the benefits of this approach, particularly its ease of access, the client preferred the always-visible navigation.
   
 5. **Interactive Menu:**  The restaurant menu prominently features interactive `FOOD` and `DRINKS` buttons within the viewport across a range of screen sizes, from 320px to 1024px. This directly addresses the client's need for the food and drinks menus to be the main focus of the website. Additionally, a `hide images` button is provided that hides all the images of food and drink items, allowing more items to be displayed in the viewport and thus reducing extensive scrolling as per the client's requirement.
 
