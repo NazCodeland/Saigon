@@ -1,7 +1,7 @@
 
 # Saigon Restaurant Website
 
-[Saigon Restaurant](https://saigonottawa.com/) approached me with the need for a static website that would provide their customers a user-friendly interface. The client already had a website and provided two additional websites as examples of websites that they liked. This allowed me to bypass the design phase typically done in Figma and iterate directly in development.
+[Saigon Restaurant](https://saigonottawa.com/) approached me with the need for a static website that would provide their customers with a user-friendly interface. The client already had a website and provided two additional websites as examples of websites that they liked. This allowed me to bypass the design phase typically done in Figma and iterate directly in development.
 
 <br/>
 
@@ -23,13 +23,17 @@
 
 ## Development Approach 
 1. **Single Page Site:** I decided to develop the entire site as a single page with different sections. This approach makes everything within the site accessible with just one click, providing ease of navigation.
-   
-3. **Visible Main Navigation:** In alignment with the client's current site and the two examples they provided, I developed a 'hamburger menu' design for mobile viewports and an alternative main navigation that is always visible on both mobile and desktop viewports. After experiencing the benefit of _ease of access_ in the customer’s user experience (UX), the client favored the always-visible navigation approach.
+
+2. **Section Outlining:** Before starting the development, I outlined the different sections of the site that I believed the client needed. I then identified the different components within those sections. This allowed me to build the site component by component, section by section, thus making it easier to show progress to the client and receive feedback.
+
+3. **Visible Main Navigation:** In alignment with the client's current site and the two examples they provided, I developed two alternative main navigation menus; the traditional mobile viewprot 'hamburger' icon menu and an alternative menu, without the 'hamburger', that is always visible on both mobile and desktop viewports. After experiencing the benefit of _ease of access_ in the customer’s user experience (UX), the client favored the always visible navigation approach.
   
-5. **Interactive Menu:**  The restaurant menu prominently features interactive `FOOD` and `DRINKS` buttons within the _viewport_ across a range of screen sizes, from 320px to 1024px. This directly addresses the client's need for the food and drinks menus to be the main focus of the website. Additionally, a `hide images` button is provided that hides all the images of food and drink items, allowing more items to be displayed in the viewport and thus reducing extensive scrolling as per the client's requirement.
+5. **Interactive Menu:**  The restaurant menu prominently features interactive `FOOD` and `DRINKS` buttons within the _viewport_ across a range of screen sizes, from 320px to 1024px. This directly addresses the client's need for the food and drinks menus to be the main focus of the website. Additionally, a `hide images` button is provided that hides all the images of food and drink items, allowing more items to be displayed in the viewport and thus, reducing extensive scrolling as per the client's requirement.
 
    ### Takeaways
-      - Throughout the development process, I used [ngrok](https://ngrok.com/) to provide the client with live updates of each section of the site. This allowed the client to provide feedback in real-time, ensuring that the final product would align with their vision. This made the development experience amazing as I was able to iterate very fast. I understand I won't be able to do this with all clients but when it works, it’s simply fantastic.
+      - **Near Real-time Feedback with ngrok:** Throughout the development process, I used ngrok to provide the client live updates on each section of the site. This allowed the client to provide feedback quickly, ensuring that the final product would align with their vision. This made the development experience amazing, as I was able to iterate very quickly. I understand I won't be able to do this with all clients, but when it works, it’s simply fantastic.
+        
+      - **Understanding Client Needs and Communication:** I initially set up a newsletter using Brevo.com based on my understanding from my conversations with the client. However, it was later deemed unnecessary. This experience highlighted the importance of sharing my checklist from the `2. Section Outlining` phase of my development approach with the client at the _start of a project_. This checklist can help me avoid wasting time on unnecessary features, even before I get feedback from the client through Ngrok or another means.
 
    
    ### Technologies Used
@@ -39,18 +43,23 @@
 
 ## Challenges
 
-1. **Contact Form Implementation:** Implementing a functional contact form was a significant challenge. Initially I tried, `Nodemailer`, a Node.js package, but found it wasn't supported in the Cloudflare Workers environment. I then switched to `fabform.io`, but found limitations such as the inability to customize the **from** part of the email and handle post-submission behaviour. Eventually, I discovered that SendGrid provides `RESTful APIs`, which are universally compatible and can be used in any environment that supports HTTP requests. This was the solution I implemented.
-   
-4. **Platform Considerations:** While Nodemailer does work on Vercel, I chose not to use this option because the main site was already being hosted on Cloudflare Pages.
-   
-5. **Newsletter Implementation:** I set up a newsletter for the website using Brevo.com. However, the client later decided against this feature, as they infrequently send out emails to clients.
-
+1. **Contact Form Implementation:**
+   Implementing a functional contact form was a significant challenge. 
+   - **First Attempt:** I initially tried `Nodemailer`, a Node.js package, for implementing the contact form.
+   - **Issue:** `Nodemailer` wasn't supported in the Cloudflare Workers environment.
+   - **Second Attempt:** I then switched to `fabform.io`.
+   - **Issue:** Encountered limitations such as the inability to customize the **from** part of the email and handle post-submission behaviour.
+   - **Final Solution:** Discovered that SendGrid provides `RESTful APIs`, which are universally compatible since they use HTTP. This made them a viable solution for the Cloudflare Workers environment.
+     
    ### Takeaways
-      - Through these iterations, I learned the importance of understanding the environment in which your code will run and ensuring compatibility between your chosen technologies. This project was a valuable learning experience.
-   
-   
-   ### New Learnings
-      - **Cloudflare Pages and Workers**: Gained experience working with Cloudflare's hosting and serverless platform.
+      - **Platform considerations:** I learned the importance of understanding the environment in which your code will run and ensuring compatibility between your chosen technologies. I have now made this process an early item in my development checklist.
+
+
+## New Learnings
+   - **Cloudflare Pages and Workers:** Gained further experience working with Cloudflare as a hosting platform and Cloudflare's serverless Workers environment.
       
-      - **Newsletter Form with Brevo.com**: Learned how to set up a newsletter form using Brevo.com.
-      - **Using Nodemailer**: Acquired skills in using Nodemailer, a Node.js package for sending emails.
+   - **Working with SendGrid:** Explored SendGrid's `RESTful APIs` and dashboard for the first time.
+     
+   - **Newsletter Form with Brevo.com**: Learned how to set up a newsletter form using Brevo.com.
+      
+   - **Using Nodemailer**: Acquired skills in using Nodemailer, a Node.js package for sending emails.
