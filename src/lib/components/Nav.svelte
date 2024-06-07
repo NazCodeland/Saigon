@@ -1,9 +1,16 @@
 <script lang="ts">
-	import { navStore, toggleNav } from '$lib/stores/navStore';
+	import { navStore } from '$lib/stores/navStore';
+	// import { toggleNav } from '$lib/stores/navStore';
+
 	import { slide } from 'svelte/transition';
 
+	type NavItem = {
+		name: string;
+		url: string;
+	};
+
 	// prettier-ignore
-	let navItems = [
+	let navItems: NavItem[] = [
 		{ name: 'Menu', url: '/#menu' },
 		{ name: 'Reservations', url: 'https://www.tbdine.com/book/restaurant/saigon-restaurant?idApp=70479&language=en-us' },
 		{ name: 'Contact', url: '/#contact' },
@@ -21,6 +28,9 @@
 
 <svelte:window bind:innerWidth bind:outerWidth />
 
+<!-- customer decided to go with open navigation in all viewport sizes
+leaving this here for future use-case if needed -->
+
 <!-- hamburger icon button -->
 <!-- <button
 	on:click={toggleNav}
@@ -36,7 +46,7 @@
 	<nav
 		in:slide
 		out:slide
-		class="shadow-md w-full select-none border-t-2 border-theme-primary bg-theme-background md:bg-transparent"
+		class="border-theme-primary bg-theme-background w-full select-none border-t-2 shadow-md md:bg-transparent"
 	>
 		<ul class=" flex flex-row flex-wrap items-center justify-evenly gap-2 py-4">
 			{#each navItems as item (item.name)}

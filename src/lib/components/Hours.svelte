@@ -1,12 +1,31 @@
 <script lang="ts">
 	import { browser } from '$app/environment';
 
-	let days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-	let currentDay: string;
+	enum DayOfWeek {
+		Sunday = 'Sunday',
+		Monday = 'Monday',
+		Tuesday = 'Tuesday',
+		Wednesday = 'Wednesday',
+		Thursday = 'Thursday',
+		Friday = 'Friday',
+		Saturday = 'Saturday'
+	}
+
+	let days: DayOfWeek[] = [
+		DayOfWeek.Sunday,
+		DayOfWeek.Monday,
+		DayOfWeek.Tuesday,
+		DayOfWeek.Wednesday,
+		DayOfWeek.Thursday,
+		DayOfWeek.Friday,
+		DayOfWeek.Saturday
+	];
+
+	let currentDay: DayOfWeek;
 
 	if (browser) {
 		let date = new Date();
-		currentDay = days[date.getDay()].toLowerCase();
+		currentDay = days[date.getDay()];
 	}
 </script>
 
@@ -17,22 +36,24 @@
 	<hr class="border border-[var(--theme-color-primary)]" />
 	<div class="flex justify-between">
 		<ul class="">
-			<li class:highlight={'monday' === currentDay} class="pb-1">Monday</li>
-			<li class:highlight={'tuesday' === currentDay} class="pb-1">Tuesday</li>
-			<li class:highlight={'wednesday' === currentDay} class="pb-1">Wednesday</li>
-			<li class:highlight={'thursday' === currentDay} class="pb-1">Thursday</li>
-			<li class:highlight={'friday' === currentDay} class="pb-1">Friday</li>
-			<li class:highlight={'saturday' === currentDay} class="pb-1">Saturday</li>
-			<li class:highlight={'sunday' === currentDay} class="pb-1">Sunday</li>
+			<li class:highlight={DayOfWeek.Monday === currentDay} class="pb-1">{DayOfWeek.Monday}</li>
+			<li class:highlight={DayOfWeek.Tuesday === currentDay} class="pb-1">{DayOfWeek.Tuesday}</li>
+			<li class:highlight={DayOfWeek.Wednesday === currentDay} class="pb-1">
+				{DayOfWeek.Wednesday}
+			</li>
+			<li class:highlight={DayOfWeek.Thursday === currentDay} class="pb-1">{DayOfWeek.Thursday}</li>
+			<li class:highlight={DayOfWeek.Friday === currentDay} class="pb-1">{DayOfWeek.Friday}</li>
+			<li class:highlight={DayOfWeek.Saturday === currentDay} class="pb-1">{DayOfWeek.Saturday}</li>
+			<li class:highlight={DayOfWeek.Sunday === currentDay} class="pb-1">{DayOfWeek.Sunday}</li>
 		</ul>
 		<ul>
-			<li class:highlight={'monday' === currentDay} class="pb-1">4:00 pm - 9:00 pm</li>
-			<li class:highlight={'tuesday' === currentDay} class="pb-1">4:00 pm - 9:00 pm</li>
-			<li class:highlight={'wednesday' === currentDay} class="pb-1">4:00 pm - 9:00 pm</li>
-			<li class:highlight={'thursday' === currentDay} class="pb-1">4:00 pm - 9:00 pm</li>
-			<li class:highlight={'friday' === currentDay} class="pb-1">12:00 pm - 11:00 pm</li>
-			<li class:highlight={'saturday' === currentDay} class="pb-1">12:00 pm - 11:00 pm</li>
-			<li class:highlight={'sunday' === currentDay} class="pb-1">12:00 pm - 8:00 pm</li>
+			<li class:highlight={DayOfWeek.Monday === currentDay} class="pb-1">4:00 pm - 9:00 pm</li>
+			<li class:highlight={DayOfWeek.Tuesday === currentDay} class="pb-1">4:00 pm - 9:00 pm</li>
+			<li class:highlight={DayOfWeek.Wednesday === currentDay} class="pb-1">4:00 pm - 9:00 pm</li>
+			<li class:highlight={DayOfWeek.Thursday === currentDay} class="pb-1">4:00 pm - 9:00 pm</li>
+			<li class:highlight={DayOfWeek.Friday === currentDay} class="pb-1">12:00 pm - 11:00 pm</li>
+			<li class:highlight={DayOfWeek.Saturday === currentDay} class="pb-1">12:00 pm - 11:00 pm</li>
+			<li class:highlight={DayOfWeek.Sunday === currentDay} class="pb-1">12:00 pm - 8:00 pm</li>
 		</ul>
 	</div>
 	<p class="text-center">Walk-ins Are Welcome</p>
@@ -40,6 +61,6 @@
 
 <style lang="css">
 	.highlight {
-		color: theme(colors.theme-secondary);
+		color: var(--theme-color-secondary);
 	}
 </style>

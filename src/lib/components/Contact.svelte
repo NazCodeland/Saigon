@@ -4,7 +4,18 @@
 	import emailIcon from '$lib/icons/email.svg';
 	import instagramIcon from '$lib/icons/instagram.svg';
 
-	let formStatus = {
+	type EmailResponseBody = {
+		success: boolean;
+		message: string;
+	};
+
+	type FormStatus = {
+		isSending: boolean;
+		message: string;
+		color: string;
+	};
+
+	let formStatus: FormStatus = {
 		isSending: false,
 		message: '',
 		color: ''
@@ -16,7 +27,7 @@
 
 		if (event.target) {
 			const formData = new FormData(event.target as HTMLFormElement);
-			let emailResponseBody;
+			let emailResponseBody: EmailResponseBody;
 			try {
 				const emailResponse = await fetch('https://sendgrid-email-worker.jason-f38.workers.dev', {
 					method: 'POST',
@@ -25,14 +36,19 @@
 				emailResponseBody = await emailResponse.json();
 				formStatus.isSending = false;
 				formStatus.message = emailResponseBody.message;
-				formStatus.color = 'bg-green-700';
 
-				//
+				// check if email was sent or not
+				if (emailResponseBody.success) {
+					formStatus.color = 'bg-green-700';
+				} else {
+					formStatus.color = 'bg-red-600';
+				}
+
+				// catch network erros or other errors
 			} catch (error) {
 				console.error('Error occurred within handleSubmit:', error);
 				formStatus.isSending = false;
-				formStatus.message =
-					emailResponseBody?.message || 'An unexpected error occurred, please try again.';
+				formStatus.message = 'An unexpected error occurred, please try again.';
 				formStatus.color = 'bg-red-600';
 			}
 		}
@@ -89,7 +105,7 @@
 				type="text"
 				name="name"
 				required
-				class="rounded-md px-3 py-2 font-semibold text-slate-950 outline-none focus:shadow-glow"
+				class="focus:shadow-glow rounded-md px-3 py-2 font-semibold text-slate-950 outline-none"
 			/>
 		</label>
 
@@ -100,7 +116,7 @@
 				type="email"
 				name="email"
 				required
-				class=" rounded-md px-3 py-2 font-semibold text-slate-950 outline-none focus:shadow-glow"
+				class=" focus:shadow-glow rounded-md px-3 py-2 font-semibold text-slate-950 outline-none"
 			/>
 		</label>
 
@@ -111,7 +127,7 @@
 				name="message"
 				required
 				rows="5"
-				class="rounded-md border px-3 py-2 font-semibold text-slate-950 outline-none focus:shadow-glow"
+				class="focus:shadow-glow rounded-md border px-3 py-2 font-semibold text-slate-950 outline-none"
 			></textarea>
 		</label>
 
@@ -123,7 +139,7 @@
 
 		<button
 			type="submit"
-			class="shadow-sm inline-flex w-full justify-center rounded-md border px-4 py-2 text-sm font-medium"
+			class="inline-flex w-full justify-center rounded-md border px-4 py-2 text-sm font-medium shadow-sm"
 		>
 			Send Message
 		</button>

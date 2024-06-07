@@ -932,7 +932,7 @@
 				{#each Object.entries(foodMenu) as [category, items]}
 					<section class="grid gap-4">
 						<h2
-							class="text-center text-3xl font-bold text-theme-secondary selection:bg-[#FFFF00] selection:text-theme-background"
+							class="text-theme-secondary selection:text-theme-background text-center text-3xl font-bold selection:bg-[#FFFF00]"
 						>
 							{category.toUpperCase()}
 						</h2>
@@ -964,7 +964,7 @@
 											</picture>
 
 											<figcaption class="text-center">
-												<strong class="text-lg font-bold text-theme-secondary">
+												<strong class="text-theme-secondary text-lg font-bold">
 													{item.name.toUpperCase()}
 													{#if item.type}({item.type.toUpperCase()}){/if}
 													{#if item.quantity}({item.quantity}){/if}
@@ -973,7 +973,7 @@
 										</figure>
 									{:else}
 										<!-- if menu item does not contain an image -->
-										<strong class="text-lg font-bold text-theme-secondary">
+										<strong class="text-theme-secondary text-lg font-bold">
 											{item.name.toUpperCase()}
 											{#if item.type}({item.type.toUpperCase()}){/if}
 											{#if item.quantity}({item.quantity}){/if}
@@ -1010,7 +1010,7 @@
 				{#each Object.entries(drinkMenu) as [category, items]}
 					<section class="grid gap-4">
 						<h2
-							class="text-center text-3xl font-bold text-theme-secondary selection:bg-[#FFFF00] selection:text-theme-background"
+							class="text-theme-secondary selection:text-theme-background text-center text-3xl font-bold selection:bg-[#FFFF00]"
 						>
 							{category.toUpperCase()}
 						</h2>
@@ -1035,7 +1035,7 @@
 												/>
 											</picture>
 											<figcaption class="text-center">
-												<strong class="text-lg font-bold text-theme-secondary">
+												<strong class="text-theme-secondary text-lg font-bold">
 													{item.name.toUpperCase()}
 													{#if item.type}({item.type.toUpperCase()}){/if}
 													{#if item.quantity}({item.quantity.toUpperCase()}){/if}
@@ -1044,7 +1044,7 @@
 										</figure>
 									{:else}
 										<!-- if menu item does not contain an image -->
-										<strong class="text-lg font-bold text-theme-secondary">
+										<strong class="text-theme-secondary text-lg font-bold">
 											{item.name.toUpperCase()}
 											{#if item.type}({item.type.toUpperCase()}){/if}
 											{#if item.quantity}({item.quantity.toUpperCase()}){/if}

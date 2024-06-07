@@ -1,7 +1,7 @@
-<script>
+<script lang="ts">
 	import externalLink from '$lib/icons/externalLink.svg';
-	let date = new Date();
-	let currentYear = date.getFullYear();
+	let date: Date = new Date();
+	let currentYear: number = date.getFullYear();
 </script>
 
 <footer class="ml-auto text-sm">
