@@ -64,8 +64,10 @@
 					href="https://maps.google.com/?q=85+Clarence+St,+Ottawa+ON+K1N+5P5"
 					target="_blank"
 				>
-					<img src={locationIcon} alt="" aria-label="location icon" />85 Clarence St, Ottawa ON K1N
-					5P5
+					<img src={locationIcon} alt="" aria-label="location icon" />
+					<span>
+						85 Clarence St, Ottawa ON <span class="whitespace-nowrap">K1N 5P5</span>
+					</span>
 				</a>
 			</address>
 		</li>
@@ -105,7 +107,7 @@
 				type="text"
 				name="name"
 				required
-				class="focus:shadow-glow rounded-md px-3 py-2 font-semibold text-slate-950 outline-none"
+				class="rounded-md px-3 py-2 font-semibold text-slate-950 outline-none focus:shadow-glow"
 			/>
 		</label>
 
@@ -116,7 +118,7 @@
 				type="email"
 				name="email"
 				required
-				class=" focus:shadow-glow rounded-md px-3 py-2 font-semibold text-slate-950 outline-none"
+				class=" rounded-md px-3 py-2 font-semibold text-slate-950 outline-none focus:shadow-glow"
 			/>
 		</label>
 
@@ -127,7 +129,7 @@
 				name="message"
 				required
 				rows="5"
-				class="focus:shadow-glow rounded-md border px-3 py-2 font-semibold text-slate-950 outline-none"
+				class="rounded-md border px-3 py-2 font-semibold text-slate-950 outline-none focus:shadow-glow"
 			></textarea>
 		</label>
 
@@ -139,7 +141,7 @@
 
 		<button
 			type="submit"
-			class="inline-flex w-full justify-center rounded-md border px-4 py-2 text-sm font-medium shadow-sm"
+			class="shadow-sm inline-flex w-full justify-center rounded-md border px-4 py-2 text-sm font-medium"
 		>
 			Send Message
 		</button>
